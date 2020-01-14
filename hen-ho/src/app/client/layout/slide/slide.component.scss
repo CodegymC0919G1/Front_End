@@ -1,0 +1,18 @@
+.carousel-caption {
+    display: inline;
+    top: 50%;
+}
+
+.carousel-caption h3 {
+    color: white;
+}
+
+.carousel-caption h3:hover {
+    color: pink;
+}
+
+.carousel-caption a:hover {
+    background-color: pink;
+    border-color: white;
+    color: white;
+}
