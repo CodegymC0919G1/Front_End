@@ -1,0 +1,106 @@
+input {
+	outline: none;
+  border: none;
+}
+textarea {
+  outline: none;
+  border: none;
+}
+label {
+  display: block;
+
+}
+
+button {
+	outline: none !important;
+	border: none;
+	background: transparent;
+}
+
+.contact100-more {
+  width: calc(100% - 560px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+  padding: 30px 15px 0px 15px;
+}
+
+.contact100-form {
+  width: 560px;
+  min-height: 50vh;
+  display: block;
+}
+
+.contact100-form-title {
+  width: 100%;
+  display: block;
+  font-size: 30px;
+  color: #333333;
+  line-height: 1.2;
+  text-align: center;
+  padding-bottom: 48px;
+}
+
+.wrap-input100 {
+  width: 100%;
+  position: relative;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.label-input100 {
+  font-size: 20px;
+  color:rgb(206, 111, 127);
+  padding: 15px 0 2px 24px;
+}
+
+.input100 {
+  display: block;
+  width: 95%;
+  background: transparent;
+  font-size: 20px;
+  color: #404b46;
+  line-height: 1.2;
+  padding: 0 25px;
+}
+
+input.input100 {
+  height: 50px;
+}
+
+textarea.input100 {
+  min-height: 130px;
+  padding-top: 14px;
+  padding-bottom: 15px;
+}
+
+.contact100-form-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 50%;
+  height: 50px;
+  border-radius: 10px;
+  background: rgb(212, 39, 68);
+}
+
+.contact100-form-btn:hover {
+  background: #404b46;
+}
+
+form{
+  border-style: inherit;
+}
+
+
+
+
+
