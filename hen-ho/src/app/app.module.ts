@@ -6,6 +6,9 @@ import { ShareModule} from 'src/app/share/share.module';
 import { HeaderComponent } from './client/layout/header/header.component';
 import { FooterComponent } from './client/layout/footer/footer.component';
 import { SlideComponent } from './client/layout/slide/slide.component';
+import { DanhSachHoiNhomComponent } from './quantrivien/quanlihoinhom/danh-sach-hoi-nhom/danh-sach-hoi-nhom.component';
+import { ChiTietHoiNhomComponent } from './quantrivien/quanlihoinhom/chi-tiet-hoi-nhom/chi-tiet-hoi-nhom.component';
+import { ThongTinCuaNhomComponent } from './quantrivien/quanlihoinhom/thong-tin-cua-nhom/thong-tin-cua-nhom.component';
 import { DangNhapComponent } from './client/login/dang-nhap/dang-nhap.component';
 import { TopComponent } from './client/top100/top/top.component';
 import { DangThongBaoComponent } from './quantrivien/thong-bao/dang-thong-bao/dang-thong-bao.component';
@@ -18,13 +21,16 @@ import { SuabaidangComponent } from './quantrivien/quanlybaidang/suabaidang/suab
 import { DanhsachbaidangComponent } from './quantrivien/quanlybaidang/danhsachbaidang/danhsachbaidang.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
     SlideComponent,
-
+    DanhSachHoiNhomComponent,
+    ChiTietHoiNhomComponent,
+    ThongTinCuaNhomComponent,
     DangNhapComponent,
     TopComponent,
     DangThongBaoComponent,
@@ -36,6 +42,7 @@ import { DanhsachbaidangComponent } from './quantrivien/quanlybaidang/danhsachba
     XembaidangComponent,
     SuabaidangComponent,
     DanhsachbaidangComponent
+
 
   ],
   imports: [
