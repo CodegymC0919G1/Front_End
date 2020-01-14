@@ -1,0 +1,18 @@
+.btn-pink-moon {
+  background: #ec008c;
+  background: -webkit-linear-gradient(to right, #fc6767, #ec008c);
+  background: linear-gradient(to right, #fc6767, #ec008c);
+  color: #fff;
+  border: 3px solid #eee;
+  // border-top-right-radius: 30px;
+	// border-bottom-right-radius: 30px;
+	// border: none;
+}
+a:hover{
+  color: black;
+}
+.bgImg{
+  height: 10%;
+  width: 10%;
+  border-radius: 10%;
+}
