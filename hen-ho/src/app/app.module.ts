@@ -41,12 +41,11 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     HeaderComponent,
     FooterComponent,
     SlideComponent,
-
     QuanlyhopthuComponent,
     XemthuComponent,
     GuithuComponent,
+    DangkiComponent,
     KhoitaothongtinComponent,
-
     DanhSachHoiNhomComponent,
     ChiTietHoiNhomComponent,
     ThongTinCuaNhomComponent,
@@ -54,6 +53,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     TopComponent,
     DangThongBaoComponent,
     LoginAdminComponent,
+    HeaderQTVComponent,
     FooterQTVComponent,
     DangbaiComponent,
     XembaidangComponent,
