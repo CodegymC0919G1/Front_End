@@ -30,7 +30,7 @@ import { DangbaiComponent } from './client/dangbai/dangbai/dangbai.component';
 import { XembaidangComponent } from './quantrivien/quanlybaidang/xembaidang/xembaidang.component';
 import { SuabaidangComponent } from './quantrivien/quanlybaidang/suabaidang/suabaidang.component';
 import { DanhsachbaidangComponent } from './quantrivien/quanlybaidang/danhsachbaidang/danhsachbaidang.component';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -44,10 +44,7 @@ import { DanhsachbaidangComponent } from './quantrivien/quanlybaidang/danhsachba
 
     QuanlyhopthuComponent,
     XemthuComponent,
-    GuithuComponent
-
-
-    DangkiComponent,
+    GuithuComponent,
     KhoitaothongtinComponent,
 
     DanhSachHoiNhomComponent,
@@ -56,24 +53,20 @@ import { DanhsachbaidangComponent } from './quantrivien/quanlybaidang/danhsachba
     DangNhapComponent,
     TopComponent,
     DangThongBaoComponent,
-    LoginAdminComponent
-
-    HeaderQTVComponent,
+    LoginAdminComponent,
     FooterQTVComponent,
     DangbaiComponent,
     XembaidangComponent,
     SuabaidangComponent,
-    DanhsachbaidangComponent
-
-
-
+    DanhsachbaidangComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ShareModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
