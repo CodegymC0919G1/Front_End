@@ -41,15 +41,11 @@ import { DanhsachbaidangComponent } from './quantrivien/quanlybaidang/danhsachba
     HeaderComponent,
     FooterComponent,
     SlideComponent,
-
     QuanlyhopthuComponent,
     XemthuComponent,
     GuithuComponent,
-
-
     DangkiComponent,
     KhoitaothongtinComponent,
-
     DanhSachHoiNhomComponent,
     ChiTietHoiNhomComponent,
     ThongTinCuaNhomComponent,
@@ -57,7 +53,6 @@ import { DanhsachbaidangComponent } from './quantrivien/quanlybaidang/danhsachba
     TopComponent,
     DangThongBaoComponent,
     LoginAdminComponent,
-
     HeaderQTVComponent,
     FooterQTVComponent,
     DangbaiComponent,
