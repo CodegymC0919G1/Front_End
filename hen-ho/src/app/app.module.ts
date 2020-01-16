@@ -26,6 +26,9 @@ import { XembaidangComponent } from './quantrivien/quanlybaidang/xembaidang/xemb
 import { SuabaidangComponent } from './quantrivien/quanlybaidang/suabaidang/suabaidang.component';
 import { DanhsachbaidangComponent } from './quantrivien/quanlybaidang/danhsachbaidang/danhsachbaidang.component';
 
+=======
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,12 +53,14 @@ import { DanhsachbaidangComponent } from './quantrivien/quanlybaidang/danhsachba
     XembaidangComponent,
     SuabaidangComponent,
     DanhsachbaidangComponent
+    DanhsachbaidangComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ShareModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
