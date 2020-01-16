@@ -41,7 +41,6 @@ import { DanhsachbaidangComponent } from './quantrivien/quanlybaidang/danhsachba
     HeaderComponent,
     FooterComponent,
     SlideComponent,
-
     QuanlyhopthuComponent,
     XemthuComponent,
     GuithuComponent,
