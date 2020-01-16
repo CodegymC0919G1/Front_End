@@ -8,7 +8,7 @@
   </div>
   <table class="table">
     <thead>
-      <tr>
+      <tr class="table-danger">
         <th>Hạng</th>
         <th>Thành viên</th>
         <th>Danh hiệu</th>
@@ -18,7 +18,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr class="table-primary">
+      <tr class="table-warning">
         <td>1st</td>
         <td>Primary</td>
         <td>Joe</td>
@@ -26,7 +26,7 @@
         <td>1000$</td>
         <td>100</td>
       </tr>
-      <tr class="table-success">
+      <tr class="table-warning">
         <td>2nd</td>
         <td>Success</td>
         <td>Doe</td>
@@ -34,7 +34,7 @@
         <td>1000$</td>
         <td>100</td>
       </tr>
-      <tr class="table-danger">
+      <tr class="table-warning">
         <td>3rd</td>
         <td>Danger</td>
         <td>Moe</td>
@@ -42,7 +42,7 @@
         <td>1000$</td>
         <td>100</td>
       </tr>
-      <tr class="table-info">
+      <tr class="table-warning">
         <td>4th</td>
         <td>Info</td>
         <td>Dooley</td>
@@ -60,4 +60,5 @@
       </tr>
     </tbody>
   </table>
+  <pagination-controls style="background: rgb(179, 92, 107);" (pageChange)="p = $event"></pagination-controls>
 </div>
