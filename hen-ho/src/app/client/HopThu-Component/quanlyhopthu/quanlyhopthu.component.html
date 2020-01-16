@@ -1,48 +1,94 @@
-<form style="text-align: center; width: 50%;">
-    <h1 style="font-family: monospace;"> Quản lý hộp thư</h1>
-    <div>
-        <button type="button" class="btn btn-danger">Hộp thư</button>
-        <button type="button" class="btn btn-danger">Thư đã đọc</button>
-        <button type="button" class="btn btn-danger">Gửi thư</button>
-        <button type="button" class="btn btn-danger">Xóa thư</button>
+<form>
+  <div class="f-grid row">
+    <div class="f-grid-col col-md-3" style="text-align: center;">
+      <div>
+        <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#exampleModal"
+          data-whatever="@getbootstrap">Gửi thư</button>
+      </div>
+      <div style="margin-top: 1em;">
+        <button type="button" class="btn btn-danger btn-lg" data-target="#exampleModalHopThu"
+          data-whatever="@getbootstrap">Hộp thư</button>
+      </div>
+      <div style="margin-top: 1em;">
+        <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#exampleModalHopThu1"
+          data-whatever="@getbootstrap">Xóa thư đã chọn</button>
+        <div style="margin-top: 1em;">
+          <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#exampleModalHopThu2"
+            data-whatever="@getbootstrap">Thư đã đọc</button>
+        </div>
+      </div>
+
     </div>
+    <div class="f-grid-col2 col-md-9" id="exampleModalHopThu">
+      <h1 style="text-align: center;">Hộp Thư</h1>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Avatar</th>
+            <th scope="col">Tên</th>
+            <th scope="col">Tiêu đề thư</th>
+            <th scope="col"> Xem Thư</th>
+            <th scope="col">Chọn tất cả <br>
+              <input type="checkbox" onClick="selectall(this) " class="size" />
+            </th>
+          </tr>
+        </thead>
 
-  
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th scope="col">Avatar</th>
-                    <th scope="col">Tên</th>
-                    <th scope="col">Tiêu đề thư</th>
-                    <th scope="col">Chọn</th>
-                </tr>
-            </thead>
-            <tr>
-                <td> <img src="https://cdn1.vectorstock.com/i/1000x1000/19/45/user-avatar-icon-sign-symbol-vector-4001945.jpg" alt="Avatar" class="avatar"></td>
-                <td>Mark</td>
-                <td><input></td> 
-                <td>  <input type="checkbox" class="size"></td> 
+
+
+        <tr>
+          <td> <img
+              src="http://123anhdep.net/wp-content/uploads/2016/02/cung-thay-avatar-than-thien-voi-bo-anh-mat-cuoi-de-thuong-dang-yeu-nhat-qua-dat-18.jpg"
+              alt="Avatar" class="avatar"></td>
+          <td>Mark</td>
+          <td>
+            <p>Tiêu đề</p>
+          </td>
+          <td>
+            <a href="#"> Xem thu</a></td>
+          <td> <input type="checkbox" name="foo" value="make" class="size"><br /></td>
          
-            </tr>
-            <tr>
-                <td> <img src="https://cdn1.vectorstock.com/i/1000x1000/19/45/user-avatar-icon-sign-symbol-vector-4001945.jpg" alt="Avatar" class="avatar"></td>
-                <td>Dương</td>
-                <td><input></td>
-                <td>  <input type="checkbox" class="size"></td> 
-            </tr>
-            <tr>
-                <td> <img src="https://cdn1.vectorstock.com/i/1000x1000/19/45/user-avatar-icon-sign-symbol-vector-4001945.jpg" alt="Avatar" class="avatar"></td>
-                <td>Thanh</td>
-                <td><input></td>
-                <td>  <input type="checkbox" class="size"></td> 
-            </tr>
-            <tr>
-                <td> <img src="https://cdn1.vectorstock.com/i/1000x1000/19/45/user-avatar-icon-sign-symbol-vector-4001945.jpg" alt="Avatar" class="avatar"></td>
-                <td>Hoàng</td>
-                <td><input></td>
-                <td><input type="checkbox" class="size"></td> 
-            </tr>
-        </table>
-  
-
+        </tr>
+        <tr onClick="open('exampleModalxemthu');">
+          <td> <img
+              src="http://123anhdep.net/wp-content/uploads/2016/02/cung-thay-avatar-than-thien-voi-bo-anh-mat-cuoi-de-thuong-dang-yeu-nhat-qua-dat-18.jpg"
+              alt="Avatar" class="avatar"></td>
+          <td>Dương</td>
+          <td>
+            <p>Tiêu đề</p>
+          </td>
+          <td>
+            <a href="#"> Xem thu</a></td>
+          <td> <input type="checkbox" name="foo" value="model" class="size"><br /></td>
+         
+        </tr>
+        <tr>
+          <td> <img
+              src="http://123anhdep.net/wp-content/uploads/2016/02/cung-thay-avatar-than-thien-voi-bo-anh-mat-cuoi-de-thuong-dang-yeu-nhat-qua-dat-18.jpg"
+              alt="Avatar" class="avatar"></td>
+          <td>Thanh</td>
+          <td>
+            <p>Tiêu đề</p>
+          </td>
+          <td>
+            <a href="#"> Xem thu</a></td>
+          <td> <input type="checkbox" name="foo" value="descr" class="size"><br /></td>
+         
+        </tr>
+        <tr>
+          <td> <img
+              src="http://123anhdep.net/wp-content/uploads/2016/02/cung-thay-avatar-than-thien-voi-bo-anh-mat-cuoi-de-thuong-dang-yeu-nhat-qua-dat-18.jpg"
+              alt="Avatar" class="avatar"></td>
+          <td>Hoàng</td>
+          <td>
+            <p>Tiêu đề</p>
+          </td>
+          <td>
+            <a href="#"> Xem thu</a> </td>
+          <td><input type="checkbox" name="foo" value="startYr" class="size"><br /></td>
+        
+        </tr>
+      </table>
+    </div>
+  </div>
 </form>
