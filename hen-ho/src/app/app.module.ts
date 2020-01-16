@@ -6,17 +6,12 @@ import { ShareModule} from 'src/app/share/share.module';
 import { HeaderComponent } from './client/layout/header/header.component';
 import { FooterComponent } from './client/layout/footer/footer.component';
 import { SlideComponent } from './client/layout/slide/slide.component';
-
 import { QuanlyhopthuComponent } from './client/HopThu-Component/quanlyhopthu/quanlyhopthu.component';
 import { XemthuComponent } from './client/HopThu-Component/xemthu/xemthu.component';
 import { GuithuComponent } from './client/HopThu-Component/guithu/guithu.component';
-
-
-
 import { FormsModule } from '@angular/forms';
 import { DangkiComponent } from './client/dangki/dangki.component';
 import { KhoitaothongtinComponent } from './client/khoitaothongtin/khoitaothongtin.component';
-
 import { DanhSachHoiNhomComponent } from './quantrivien/quanlihoinhom/danh-sach-hoi-nhom/danh-sach-hoi-nhom.component';
 import { ChiTietHoiNhomComponent } from './quantrivien/quanlihoinhom/chi-tiet-hoi-nhom/chi-tiet-hoi-nhom.component';
 import { ThongTinCuaNhomComponent } from './quantrivien/quanlihoinhom/thong-tin-cua-nhom/thong-tin-cua-nhom.component';
@@ -31,43 +26,30 @@ import { XembaidangComponent } from './quantrivien/quanlybaidang/xembaidang/xemb
 import { SuabaidangComponent } from './quantrivien/quanlybaidang/suabaidang/suabaidang.component';
 import { DanhsachbaidangComponent } from './quantrivien/quanlybaidang/danhsachbaidang/danhsachbaidang.component';
 
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
     SlideComponent,
-
     QuanlyhopthuComponent,
     XemthuComponent,
-    GuithuComponent
-
-
+    GuithuComponent,
     DangkiComponent,
     KhoitaothongtinComponent,
-
     DanhSachHoiNhomComponent,
     ChiTietHoiNhomComponent,
     ThongTinCuaNhomComponent,
     DangNhapComponent,
     TopComponent,
     DangThongBaoComponent,
-    LoginAdminComponent
-
+    LoginAdminComponent,
     HeaderQTVComponent,
     FooterQTVComponent,
     DangbaiComponent,
     XembaidangComponent,
     SuabaidangComponent,
     DanhsachbaidangComponent
-
-
-
-
   ],
   imports: [
     BrowserModule,
