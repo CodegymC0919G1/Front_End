@@ -25,8 +25,6 @@ import { DangbaiComponent } from './client/dangbai/dangbai/dangbai.component';
 import { XembaidangComponent } from './quantrivien/quanlybaidang/xembaidang/xembaidang.component';
 import { SuabaidangComponent } from './quantrivien/quanlybaidang/suabaidang/suabaidang.component';
 import { DanhsachbaidangComponent } from './quantrivien/quanlybaidang/danhsachbaidang/danhsachbaidang.component';
-
-=======
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
@@ -53,7 +51,6 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     XembaidangComponent,
     SuabaidangComponent,
     DanhsachbaidangComponent
-    DanhsachbaidangComponent,
   ],
   imports: [
     BrowserModule,
