@@ -8,63 +8,30 @@
       <tr>
         <th>Tên hội nhóm</th>
         <th>Ngày thành lập</th>
-        <th>Số thành viên</th>
+        <!-- <th>Số thành viên</th> -->
         <th>Số lần cảnh cáo</th>
       </tr>
     </thead>
     <tbody class="bg">
-      <tr>
-        <td><a href="#">John</a></td>
-        <td>09/10/2019</td>
-        <td>12
+      <tr
+        *ngFor="let hn of hoiNhomList | paginate: { itemsPerPage: 10, currentPage: p }" >
+        <td>
+          <a [routerLink]="['/detailhoinhom/',hn.idHoiNhom]">{{hn.tenHoiNhom}}</a>
         </td>
-        <td>1</td>
-      </tr>
-      <tr>
-        <td><a href="#">John</a></td>
-        <td>09/10/2019</td>
-        <td>12</td>
-        <td>1</td>
-      </tr>
-      <tr>
-        <td><a [routerLink]="['chitiethoinhom']">John</a></td>
-        <td>09/10/2019</td>
-        <td>12</td>
-        <td>1</td>
-      </tr>
-      <tr class="">
-        <td><a href="#">John</a></td>
-        <td>09/10/2019</td>
-        <td>12</td>
-        <td>1</td>
-      </tr>
-      <tr>
-        <td><a href="#">John</a></td>
-        <td>09/10/2019</td>
-        <td>12</td>
-        <td>1</td>
-      </tr>
-      <tr>
-        <td><a href="#">John</a></td>
-        <td>09/10/2019</td>
-        <td>12</td>
-        <td>1</td>
-      </tr>
-      <tr>
-        <td><a href="#">John</a></td>
-        <td>09/10/2019</td>
-        <td>12</td>
-        <td>1</td>
-      </tr>
-      <tr>
-        <td><a href="#">John</a></td>
-        <td>09/10/2019</td>
-        <td>12</td>
-        <td>1</td>
+        <td>
+          {{hn.ngayThanhLap}}
+        </td>
+        <!-- <td>
+          {{hn.soThanhVien}}
+        </td> -->
+        <td>
+          {{hn.soLanCanhCao}}
+        </td>
       </tr>
     </tbody>
   </table>
-  <div class="row">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  <!-- <div class="row">
     <div class="col-sm-8"></div>
     <div class="col-sm-4">
       <ul class="pagination">
@@ -81,8 +48,8 @@
           <a class="page-link" href="#">Next</a>
         </li>
       </ul>
-    </div>
+    </div> -->
     <!-- <div class="col-sm-2"></div> -->
 
-  </div>
+  <!-- </div> -->
 </div>
