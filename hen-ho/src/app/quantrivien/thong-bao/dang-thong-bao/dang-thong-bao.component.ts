@@ -15,7 +15,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./dang-thong-bao.component.scss']
 })
 export class DangThongBaoComponent implements OnInit {
-  thongbao: ThongBao;
+  thongbao: ThongBao = new ThongBao();
   thongbaoForm: FormGroup;
 
   constructor(
@@ -27,25 +27,30 @@ export class DangThongBaoComponent implements OnInit {
 
   ngOnInit() {
     this.thongbaoForm = this.fb.group({
-      tieuDe: ['', [Validators.required]],
-      noiDung: ['', [Validators.required]]
+      tieuDe: [''],
+      noiDung: ['']
     });
   }
-  onSubmit() {
-    if (this.thongbaoForm.valid) {
-        const { value } = this.thongbaoForm;
-        const data = {
-            ...this.thongbao,
-            ...value,
-            ...this.thongbao.thoiGianThongBao = new Date()
-        };
-        this.thongbaoService.createThongBao(data).subscribe(
+  onSubmit(form) {
+    
+        // const { value } = this.thongbaoForm;
+        // const data = {
+        //     ...this.thongbao,
+        //     ...value
+        // };
+        console.log(form.noiDung);
+        console.log(this.thongbao.noiDung);
+        
+        this.thongbao.noiDung = form.noiDung;
+        this.thongbao.tieuDe = form.tieuDe;
+        this.thongbao.thoiGianThongBao = new Date();
+        console.log(this.thongbao);
+        this.thongbaoService.createThongBao(this.thongbao).subscribe(
             next => {
-                this.router.navigate(['thongbao/list']);
+                this.router.navigate(['admin/thong-bao/list']);
             },
             error => console.log(error)
         );
-    }
 }
 
 }

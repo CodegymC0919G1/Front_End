@@ -3,10 +3,8 @@ import { AuthJwtService } from '../../../auth/auth-jwt.service';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { AuthLoginInfo } from '../../../auth/login-info';
 import { TokenStorageService } from '../../../auth/token-storage.service';
-import { AuthService } from 'angular-6-social-login';
 import { Router, ActivatedRoute } from '@angular/router';
 import { LoginStatusService } from 'src/app/share/login-status.service';
-import { UserService } from 'src/app/service/user/user-service';
 
 @Component({
   selector: 'app-login-admin',
@@ -31,8 +29,7 @@ export class LoginAdminComponent implements OnInit {
     private fb: FormBuilder,
     private tokenStorage: TokenStorageService,
     private router: Router, private route: ActivatedRoute,
-    private loginStatusService: LoginStatusService,
-    private accountService: UserService
+    private loginStatusService: LoginStatusService
   ) { }
 
   ngOnInit() {
@@ -68,7 +65,7 @@ export class LoginAdminComponent implements OnInit {
       this.isLoggedIn = true;
       this.loginStatusService.changeState(true);
       console.log(this.loginStatusService.status);
-      this.router.navigate(['../top100'], { relativeTo: this.route });
+      this.router.navigate(['../admin'], { relativeTo: this.route });
     }, error => {
       console.log('Error ', error);
       this.isLoginFailed = true;

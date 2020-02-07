@@ -31,6 +31,9 @@ import { AuthServiceConfig } from 'angular-6-social-login';
 import { httpInterceptorProviders } from './auth/auth-interceptor';
 import { HttpClientModule } from '@angular/common/http';
 import { ListThongbaoComponent } from './quantrivien/thong-bao/list-thongbao/list-thongbao.component';
+import { QuanLyThanhVienComponent } from './quantrivien/quanlythanhvien/quan-ly-thanh-vien/quan-ly-thanh-vien.component';
+import { PhanHoiComponent } from './quantrivien/quanlythanhvien/phan-hoi/phan-hoi.component';
+import { LayoutAdminComponent } from './quantrivien/layout/layout-admin/layout-admin.component';
 
 export function getAuthServiceConfigs() {
   const config = new AuthServiceConfig(
@@ -38,7 +41,6 @@ export function getAuthServiceConfigs() {
   );
   return config;
 }
-
 
 @NgModule({
   declarations: [
@@ -65,6 +67,11 @@ export function getAuthServiceConfigs() {
     SuabaidangComponent,
     DanhsachbaidangComponent,
     ListThongbaoComponent,
+
+    QuanLyThanhVienComponent,
+    PhanHoiComponent,
+    LayoutAdminComponent
+
   ],
   imports: [
     BrowserModule,

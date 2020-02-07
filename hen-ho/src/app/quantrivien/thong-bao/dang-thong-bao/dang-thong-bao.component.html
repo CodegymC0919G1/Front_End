@@ -6,7 +6,7 @@
   </div>
   <div class="contact-section">
   <div class="container">
-    <form [formGroup]="thongbaoForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="thongbaoForm" (ngSubmit)="onSubmit(thongbaoForm.value)">
       <div class="row">
       <div class="col-md-6 form-line">
           <div class="form-group">
@@ -26,7 +26,7 @@
              <textarea  class="form-control" id="description" placeholder="Nhập Nội dung" formControlName="noiDung"></textarea>
           </div>
           <div>
-            <button type="button" class="btn btn-warning submit"><i class="fa fa-paper-plane" ></i>&nbsp; &nbsp; Gửi  &nbsp; &nbsp; &nbsp;</button>
+            <button type="submit" class="btn btn-warning submit"><i class="fa fa-paper-plane" ></i>&nbsp; &nbsp; Gửi  &nbsp; &nbsp; &nbsp;</button>
           </div>
       </div>
     </div>
