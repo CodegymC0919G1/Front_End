@@ -15,13 +15,14 @@
             </li>
 
             <!-- Dropdown -->
-            <li class="nav-item dropdown ">
-                <a class="nav-link border-0 dropdown-toggle " id="navbardrop " data-toggle="dropdown ">
-         Tài khoản
+
+            <li class="nav-item dropdown">
+                <a class="nav-link border-0 dropdown-toggle" id="navbardrop" data-toggle="dropdown">
+         Tài khoản {{current}}
         </a>
-                <div class="dropdown-menu ">
-                    <a class="dropdown-item " href="# ">Hồ sơ</a>
-                    <a class="dropdown-item " href="# ">Đăng xuất</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Hồ sơ</a>
+                    <a class="dropdown-item" (click)="logout()">Đăng xuất</a>
                 </div>
             </li>
         </ul>

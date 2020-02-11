@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthLoginInfo } from 'src/app/auth/login-info';
+import { Router } from '@angular/router';
+import { TokenStorageService } from 'src/app/auth/token-storage.service';
 
 @Component({
   selector: 'app-layout-admin',
@@ -6,10 +9,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./layout-admin.component.scss']
 })
 export class LayoutAdminComponent implements OnInit {
+  currentUser: AuthLoginInfo;
+  current = "";
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private tokenStorage: TokenStorageService,
+  ) {}
 
   ngOnInit() {
+    this.current = this.tokenStorage.getUsername();
   }
 
+  logout() {
+    this.tokenStorage.signOut();
+    this.router.navigate(['/loginAD']);
+}
 }
