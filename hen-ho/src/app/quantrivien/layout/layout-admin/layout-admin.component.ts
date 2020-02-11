@@ -10,7 +10,7 @@ import { TokenStorageService } from 'src/app/auth/token-storage.service';
 })
 export class LayoutAdminComponent implements OnInit {
   currentUser: AuthLoginInfo;
-  current = "";
+  current = '';
 
   constructor(
     private router: Router,
