@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>HenHo</title>
@@ -17,20 +18,11 @@
     function readURL(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
-<<<<<<< HEAD
-<<<<<<< HEAD
-                reader.onload = function (e) {
-=======
-
-                reader.onload = function(e) {
->>>>>>> 5ef9b97bd0e5149179338b98274e098c0e40b12f
-                    $('#blah')
-=======
                 reader.onload = function (e) {
                     $('#blah')  
->>>>>>> 875313843e9a13247a9e96ebfdfa0b71b496571e
                         .attr('src', e.target.result);
                 };
+
                 reader.readAsDataURL(input.files[0]);
             }
         }
@@ -62,9 +54,11 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
     <div class="container-fluid" style="padding: 0;">
         <app-root></app-root>
     </div>
 </body>
+
 </html>

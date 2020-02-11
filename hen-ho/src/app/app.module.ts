@@ -24,16 +24,11 @@ import { DangbaiComponent } from './client/dangbai/dangbai/dangbai.component';
 import { XembaidangComponent } from './quantrivien/quanlybaidang/xembaidang/xembaidang.component';
 import { SuabaidangComponent } from './quantrivien/quanlybaidang/suabaidang/suabaidang.component';
 import { DanhsachbaidangComponent } from './quantrivien/quanlybaidang/danhsachbaidang/danhsachbaidang.component';
-
-
-
-import { XemloimoiketbanComponent } from './client/ketban/xemloimoiketban/xemloimoiketban.component';
-import { GuiloimoiketbanComponent } from './client/ketban/guiloimoiketban/guiloimoiketban.component';
-import { XemdanhsachbanbeComponent } from './client/ketban/xemdanhsachbanbe/xemdanhsachbanbe.component';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
+import {HttpClientModule} from '@angular/common/http';
 import { MDBBootstrapModule,DropdownModule  } from 'angular-bootstrap-md';
 import { ThongtinchokhachComponent } from './client/XemThongTinWebsite/thongtinchokhach/thongtinchokhach.component';
 import { ThongtinchothanhvienComponent } from './client/XemThongTinWebsite/thongtinchothanhvien/thongtinchothanhvien.component';
@@ -87,13 +82,9 @@ export function getAuthServiceConfigs() {
     PhanHoiComponent,
 
     LayoutAdminComponent,
-    XemloimoiketbanComponent,
-    GuiloimoiketbanComponent,
-    XemdanhsachbanbeComponent,
-    LayoutAdminComponent,
     ThongbaoDetalComponent
   ],
-
+  
   imports: [
     BrowserModule,
     ReactiveFormsModule,
@@ -101,8 +92,6 @@ export function getAuthServiceConfigs() {
     ShareModule,
     FormsModule,
     NgbModule,
-    ReactiveFormsModule,
-    HttpClientModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MatButtonModule,
@@ -114,7 +103,7 @@ export function getAuthServiceConfigs() {
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [GuithuComponent],
+  entryComponents: [GuithuComponent]
     HttpClientModule
   ],
   providers: [
