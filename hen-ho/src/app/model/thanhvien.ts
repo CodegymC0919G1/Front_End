@@ -1,0 +1,21 @@
+export class ThanhVien{
+    idThanhVien:number;
+    hoTen:string;
+    gioiTinh:string;
+    ngaySinh:Date;
+    email:string;
+    diaChi:string;
+    ngheNghiep:string;
+    tinhTrangHonNhan:boolean;
+    anhDaiDien:FormData;
+    soLanCanhcao:number;
+    xu:number;
+    luotThich:number;
+    trangThaiDangNhap:number;
+    khoa:boolean;
+    mucDichThamGia:string
+    user:number;
+    matKhau:string;
+    constructor(){
+    }
+}

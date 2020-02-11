@@ -1,4 +1,129 @@
+input {
+	outline: none;
+  border: none;
+}
+textarea {
+  outline: none;
+  border: none;
+}
+label {
+  display: block;
+
+}
+.contact100-more {
+  width: calc(100% - 560px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+  padding: 30px 15px 0px 15px;
+}
+
+.contact100-form {
+  width: 600px;
+  min-height: 60vh;
+  display: block;
+}
+
+.contact100-form-title {
+  width: 100%;
+  display: block;
+  font-family: Poppins-Regular;
+  font-size: 30px;
+  color: #333333;
+  line-height: 1.2;
+  text-align: center;
+  padding-bottom: 48px;
+  font-style: italic;
+}
+
+.wrap-input100 {
+  width: 100%;
+  position: relative;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.label-input100 {
+  font-family: Montserrat-SemiBold;
+  font-size: 20px;
+  color:rgb(206, 111, 127);
+  padding: 15px 0 2px 24px;
+}
+
+.input100 {
+  display: block;
+  width: 95%;
+  background: transparent;
+  font-family: Montserrat-Regular;
+  font-size: 20px;
+  color: #404b46;
+  line-height: 1.2;
+  padding: 0 25px;
+}
+
+input.input100 {
+  height: 50px;
+}
+
+textarea.input100 {
+  min-height: 130px;
+  padding-top: 14px;
+  padding-bottom: 15px;
+}
+
+.contact100-form-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 50%;
+  height: 50px;
+  border-radius: 10px;
+  background: rgb(212, 39, 68);
+}
+
+.contact100-form-btn:hover {
+  background: #404b46;
+}
+
+form{
+  height: 400px;
+  width: 400px;
+  border-style: inherit;
+}
+
 textarea{
-    width: 450px;
-    height: 100px;
-  }
+  width: 450px;
+  height: 100px;
+}
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: #3a3a3a;
+}
+
+/* Overwrite the styles of the mat-dialog-container element globally, but only for those
+that have an id of `modal-component` */
+/* https://stackoverflow.com/a/48689004/9263761 */
+mat-dialog-container#modal-component {
+  border: 3px solid #262626;
+  border-radius: 11px;
+  background-color: #1a1a1a;
+}
+
+
+

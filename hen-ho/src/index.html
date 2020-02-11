@@ -8,7 +8,8 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js"></script>
+  <script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
       bkLib.onDomLoaded(function() {
         new nicEditor({maxHeight : 200}).panelInstance('area');
@@ -17,12 +18,17 @@
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
 <<<<<<< HEAD
+<<<<<<< HEAD
                 reader.onload = function (e) {
 =======
 
                 reader.onload = function(e) {
 >>>>>>> 5ef9b97bd0e5149179338b98274e098c0e40b12f
                     $('#blah')
+=======
+                reader.onload = function (e) {
+                    $('#blah')  
+>>>>>>> 875313843e9a13247a9e96ebfdfa0b71b496571e
                         .attr('src', e.target.result);
                 };
                 reader.readAsDataURL(input.files[0]);
@@ -36,11 +42,25 @@
                 checkboxes[i].checked = source.checked;
             }
         }
+
       }
+      document.getElementById('btn').onclick = function()
+            {
+                var checkbox = document.getElementsByName('foo');
+                var result = "";
+                for (var i = 0; i < checkbox.length; i++){
+                    if (checkbox[i].checked === true){
+                        result += ' [' + checkbox[i].value + ']';
+                    }
+                }
+                alert("Bạn có chắc chắn xóa: " + result);
+            };
       function open(x){
         $(x).modal('show');
     }
     </script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <div class="container-fluid" style="padding: 0;">
