@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule,NO_ERRORS_SCHEMA } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ShareModule} from 'src/app/share/share.module';
@@ -15,7 +15,6 @@ import { KhoitaothongtinComponent } from './client/khoitaothongtin/khoitaothongt
 import { DanhSachHoiNhomComponent } from './quantrivien/quanlihoinhom/danh-sach-hoi-nhom/danh-sach-hoi-nhom.component';
 import { ChiTietHoiNhomComponent } from './quantrivien/quanlihoinhom/chi-tiet-hoi-nhom/chi-tiet-hoi-nhom.component';
 import { ThongTinCuaNhomComponent } from './quantrivien/quanlihoinhom/thong-tin-cua-nhom/thong-tin-cua-nhom.component';
-import { DangNhapComponent } from './client/login/dang-nhap/dang-nhap.component';
 import { TopComponent } from './client/top100/top/top.component';
 import { DangThongBaoComponent } from './quantrivien/thong-bao/dang-thong-bao/dang-thong-bao.component';
 import { LoginAdminComponent } from './quantrivien/login-admin/login-admin/login-admin.component';
@@ -26,12 +25,32 @@ import { XembaidangComponent } from './quantrivien/quanlybaidang/xembaidang/xemb
 import { SuabaidangComponent } from './quantrivien/quanlybaidang/suabaidang/suabaidang.component';
 import { DanhsachbaidangComponent } from './quantrivien/quanlybaidang/danhsachbaidang/danhsachbaidang.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import {HttpClientModule} from '@angular/common/http';
+import { MDBBootstrapModule,DropdownModule  } from 'angular-bootstrap-md';
+import { ThongtinchokhachComponent } from './client/XemThongTinWebsite/thongtinchokhach/thongtinchokhach.component';
+import { ThongtinchothanhvienComponent } from './client/XemThongTinWebsite/thongtinchothanhvien/thongtinchothanhvien.component';
+import { ThongtinchoquantrivienComponent } from './client/XemThongTinWebsite/thongtinchoquantrivien/thongtinchoquantrivien.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { DangNhapComponent } from './client/login/dang-nhap/dang-nhap.component';
+import { AuthServiceConfig } from 'angular-6-social-login';
+import { httpInterceptorProviders } from './auth/auth-interceptor';
 import { HttpClientModule } from '@angular/common/http';
+import { ListThongbaoComponent } from './quantrivien/thong-bao/list-thongbao/list-thongbao.component';
+import { QuanLyThanhVienComponent } from './quantrivien/quanlythanhvien/quan-ly-thanh-vien/quan-ly-thanh-vien.component';
+import { PhanHoiComponent } from './quantrivien/quanlythanhvien/phan-hoi/phan-hoi.component';
+import { LayoutAdminComponent } from './quantrivien/layout/layout-admin/layout-admin.component';
+import { ThongbaoDetalComponent } from './quantrivien/thong-bao/thongbao-detal/thongbao-detal.component';
 
 
-
-
-
+export function getAuthServiceConfigs() {
+  const config = new AuthServiceConfig(
+    []
+  );
+  return config;
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,19 +75,44 @@ import { HttpClientModule } from '@angular/common/http';
     XembaidangComponent,
     SuabaidangComponent,
     DanhsachbaidangComponent,
-    
- 
+    ThongtinchokhachComponent,
+    ThongtinchothanhvienComponent,
+    ThongtinchoquantrivienComponent,
+    ListThongbaoComponent,
+    QuanLyThanhVienComponent,
+    PhanHoiComponent,
+    LayoutAdminComponent,
+    ThongbaoDetalComponent
   ],
+  
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     ShareModule,
     FormsModule,
     NgbModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatDialogModule,
     HttpClientModule,
-    ReactiveFormsModule
+    MDBBootstrapModule.forRoot(),
+    DropdownModule.forRoot(),
   ],
-  providers:[],
+  schemas: [ NO_ERRORS_SCHEMA ],
+  providers: [],
+  bootstrap: [AppComponent],
+  entryComponents: [GuithuComponent]
+    HttpClientModule
+  ],
+  providers: [
+    {
+      provide: AuthServiceConfig,
+      useFactory: getAuthServiceConfigs,
+    },
+    httpInterceptorProviders
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
