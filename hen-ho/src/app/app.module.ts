@@ -44,6 +44,7 @@ import { PhanHoiComponent } from './quantrivien/quanlythanhvien/phan-hoi/phan-ho
 import { LayoutAdminComponent } from './quantrivien/layout/layout-admin/layout-admin.component';
 import { ThongbaoDetalComponent } from './quantrivien/thong-bao/thongbao-detal/thongbao-detal.component';
 
+
 export function getAuthServiceConfigs() {
   const config = new AuthServiceConfig(
     []
@@ -80,7 +81,6 @@ export function getAuthServiceConfigs() {
     ListThongbaoComponent,
     QuanLyThanhVienComponent,
     PhanHoiComponent,
-
     LayoutAdminComponent,
     ThongbaoDetalComponent
   ],
