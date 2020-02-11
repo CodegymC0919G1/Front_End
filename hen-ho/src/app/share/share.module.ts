@@ -6,10 +6,10 @@ const ShareModules = [
   NgxPaginationModule,
   Ng2SearchPipeModule,
   Ng2OrderModule
-];
+]
 @NgModule({
   declarations: [],
-  imports: [ShareModule],
+  imports: [ShareModules ],
   exports: [ShareModules]
 })
 export class ShareModule { }
