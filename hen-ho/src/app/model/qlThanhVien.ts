@@ -15,6 +15,7 @@ export class QlThanhVien {
   khoa: boolean;
   mucDichThamGia: string;
   ngheNghiep: string;
-  ngayThamGia: Date;
+  user:string;
+  ngayThamGia:string;
   contructor() { }
 }
