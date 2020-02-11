@@ -1,40 +1,33 @@
-<!-- Gửi thư -->
-<div class="modal fade" id="exampleModalXemThu" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Soạn thư</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="form-group">
-                        <label for="recipient-name" class="form-control-label">Người gửi:</label>
-                        <input type="text" class="form-control" id="recipient-name">
-                    </div>
-                    <div class="form-group">
-                        <label for="message-text" class="form-control-label">Người nhận:</label>
-                        <input class="form-control" id="message-text">
-                    </div>
-                     <div class="form-group">
-                        <label for="message-text" class="form-control-label">Tiêu đề:</label>
-                        <input class="form-control" id="message-text">
-                    </div> 
-                    
-                    <div class="form-group">
-                        <label for="message-text" class="form-control-label">Nội dung:</label>
-                        <textarea class="form-control" id="area"></textarea>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger btn-lg" data-dismiss="modal">Gửi thư</button>
-                <button type="button" class="btn btn-danger btn-lg" data-dismiss="modal">Hủy</button>
-            </div>
+<div class="modal-dialog" role="document">
+    <div class="modal-content" style="width: 600px;">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Thư</h5>
+        </div>
+        <div class="modal-body">
+            <form class="contact100-form">
+                <h1 class="contact100-form-title">
+                    Thư đến từ: <b style="color: rgb(95, 95, 240);">{{thu.thanhVienGui.hoTen}}</b> <br>
+                    Vào lúc: <b style="color: rgb(95, 95, 240);">{{thu.thoiGianGui| date:'dd/MM/yyyy HH:mm:ss'}}</b>
+                </h1>
+                <div class="wrap-input100 ">
+                    <label class="label-input100">Tiêu đề</label>
+                    <input id="name" class="input100" type="text" name="name" value=" {{thu.tieuDe}}" disabled>
+
+                </div>
+
+                <div class="wrap-input100 ">
+                    <label class="label-input100" for="message">Nội dung</label>
+                    <textarea id="message" class="input100" name="message" value="{{thu.noiDung}}" disabled></textarea>
+                </div>
+
+            </form>
+        </div>
+        <div class="modal-footer">
+
+            <button type="button" class="btn btn-info btn-lg" (click)="actionFunction()">Trả lời</button>
+
+            <button type="button" class="btn btn-info btn-lg" (click)="closeModal()">Hủy</button>
+
         </div>
     </div>
 </div>
-

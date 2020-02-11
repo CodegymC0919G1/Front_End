@@ -4,7 +4,8 @@
       <div class="col-md-2">
       </div>
       <div class="col-md-8">
-        <form class="wao-form" action="">
+        <div [hidden]="submitted" >
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
           <div class="wao-form__row wao-form__header br-8">
             <p class="h3">Khởi Tạo Thông Tin</p>
           </div>
@@ -13,9 +14,13 @@
               <div class="row">
                 
                 <div class="col-12 form-group">
-                  <label>Ảnh đại diện</label>
-                  <input type='file' onchange="readURL(this);" />
-                  <img id="blah" src="http://placehold.it/180" alt="your image" />
+                  <b>Ảnh đại diện</b>
+                  <div>
+                    <input type="file" (change)="onFileChanged($event)">
+                
+                    <img [src]="imgURL" height="150" *ngIf="imgURL">
+                  </div>
+                 <hr/>
                 </div>
               </div>
             </div>
@@ -26,45 +31,43 @@
           <div class="col-md-12 form-group">
               <b>Tình Trạng Hôn Nhân</b>
                &nbsp;
-              <input type="radio" id="ĐộcThân"> ĐộcThân
+              <input type="radio" id="tinhTrangHonNhan" class="tinhTrangHonNhan" formControlName="tinhTrangHonNhan" value="DocThan">ĐộcThân
                &nbsp;
-              <input type="radio" id="KếtHôn"> Đã Kết Hôn
+              <input type="radio" id="tinhTrangHonNhan" class="tinhTrangHonNhan" formControlName="tinhTrangHonNhan" value="DaKetHon">Đã Kết Hôn
           </div>
-
-          
 
           <div class="col-12 form-group">
               <b>Mục Đích Tham Gia:</b>
           </div>
 
           <div class="col-12 form-group">
-            <input type="checkbox" id="cb_aggreeTerm">
-            <label for="">Tìm Bạn Bè Và Giao Tiếp</label>
+            <input type="checkbox" value="timbanbevagiaotiep" id="mucDichThamGia" class="mucDichThamGia" formControlName="mucDichThamGia" (click)="click($event)" >
+            <label for="button">Tìm Bạn Bè Và Giao Tiếp</label>
             <br>
-            <input type="checkbox" id="cb_aggreeTerm">
-            <label for="">Giao Tiếp</label>
+            <input type="checkbox" value="giaotiep" id="mucDichThamGia" class="mucDichThamGia" formControlName="mucDichThamGia" (click)="click($event)">
+            <label for="button">Giao Tiếp</label>
             <br>
-            <input type="checkbox" id="cb_aggreeTerm">
-            <label for="">Tình Yêu,Quan Hệ Lãng Mạn</label>
+            <input type="checkbox" value="tinhyeu,quanhelangmang" id="mucDichThamGia" class="mucDichThamGia" formControlName="mucDichThamGia" (click)="click($event)">
+            <label for="button">Tình Yêu,Quan Hệ Lãng Mạn</label>
             <br>
-            <input type="checkbox" id="cb_aggreeTerm">
-            <label for="">Vì Tiền</label>
+            <input type="checkbox" value="vitien" id="mucDichThamGia" class="mucDichThamGia" formControlName="mucDichThamGia" (click)="click($event)">
+            <label for="button">Vì Tiền</label>
             <br>
-            <input type="checkbox" id="cb_aggreeTerm">
-            <label for="">Hôn Nhân</label>
+            <input type="checkbox" value="honnhan" id="mucDichThamGia" class="mucDichThamGia" formControlName="mucDichThamGia" (click)="click($event)">
+            <label for="button">Hôn Nhân</label>
           </div>
-
           <div class="wao-form__btnGroup">
             <div class="row">
               <div class="col-md-6">
-                <input type="submit" value="Xong" style="background-color: blue;">
-               
+                <input type="submit" value="Xong"  style="background-color: red">
               </div>
             </div>
           </div>
         </form>
+        </div>
       </div>
       <div class="col-md-4">
         <div class="sidebar-left d-none d-lg-block mt-20">
+
 
                 
