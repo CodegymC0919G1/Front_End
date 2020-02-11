@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule,NO_ERRORS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ShareModule} from 'src/app/share/share.module';
@@ -24,15 +24,7 @@ import { DangbaiComponent } from './client/dangbai/dangbai/dangbai.component';
 import { XembaidangComponent } from './quantrivien/quanlybaidang/xembaidang/xembaidang.component';
 import { SuabaidangComponent } from './quantrivien/quanlybaidang/suabaidang/suabaidang.component';
 import { DanhsachbaidangComponent } from './quantrivien/quanlybaidang/danhsachbaidang/danhsachbaidang.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material/button';
-import { MatDialogModule } from '@angular/material/dialog';
-import {HttpClientModule} from '@angular/common/http';
-import { MDBBootstrapModule,DropdownModule  } from 'angular-bootstrap-md';
-import { ThongtinchokhachComponent } from './client/XemThongTinWebsite/thongtinchokhach/thongtinchokhach.component';
-import { ThongtinchothanhvienComponent } from './client/XemThongTinWebsite/thongtinchothanhvien/thongtinchothanhvien.component';
-import { ThongtinchoquantrivienComponent } from './client/XemThongTinWebsite/thongtinchoquantrivien/thongtinchoquantrivien.component';
+
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { DangNhapComponent } from './client/login/dang-nhap/dang-nhap.component';
 import { AuthServiceConfig } from 'angular-6-social-login';
@@ -49,6 +41,7 @@ export function getAuthServiceConfigs() {
   );
   return config;
 }
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,16 +66,13 @@ export function getAuthServiceConfigs() {
     XembaidangComponent,
     SuabaidangComponent,
     DanhsachbaidangComponent,
-    ThongtinchokhachComponent,
-    ThongtinchothanhvienComponent,
-    ThongtinchoquantrivienComponent,
     ListThongbaoComponent,
 
     QuanLyThanhVienComponent,
     PhanHoiComponent,
     LayoutAdminComponent
+
   ],
-  
   imports: [
     BrowserModule,
     ReactiveFormsModule,
@@ -90,18 +80,6 @@ export function getAuthServiceConfigs() {
     ShareModule,
     FormsModule,
     NgbModule,
-    BrowserAnimationsModule,
-    ReactiveFormsModule,
-    MatButtonModule,
-    MatDialogModule,
-    HttpClientModule,
-    MDBBootstrapModule.forRoot(),
-    DropdownModule.forRoot(),
-  ],
-  schemas: [ NO_ERRORS_SCHEMA ],
-  providers: [],
-  bootstrap: [AppComponent],
-  entryComponents: [GuithuComponent]
     HttpClientModule
   ],
   providers: [
