@@ -42,7 +42,6 @@ import { ListThongbaoComponent } from './quantrivien/thong-bao/list-thongbao/lis
 import { QuanLyThanhVienComponent } from './quantrivien/quanlythanhvien/quan-ly-thanh-vien/quan-ly-thanh-vien.component';
 import { PhanHoiComponent } from './quantrivien/quanlythanhvien/phan-hoi/phan-hoi.component';
 import { LayoutAdminComponent } from './quantrivien/layout/layout-admin/layout-admin.component';
-import { ThongbaoDetalComponent } from './quantrivien/thong-bao/thongbao-detal/thongbao-detal.component';
 
 export function getAuthServiceConfigs() {
   const config = new AuthServiceConfig(
@@ -78,11 +77,10 @@ export function getAuthServiceConfigs() {
     ThongtinchothanhvienComponent,
     ThongtinchoquantrivienComponent,
     ListThongbaoComponent,
+
     QuanLyThanhVienComponent,
     PhanHoiComponent,
-
-    LayoutAdminComponent,
-    ThongbaoDetalComponent
+    LayoutAdminComponent
   ],
   
   imports: [
