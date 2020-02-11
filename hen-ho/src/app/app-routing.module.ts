@@ -1,5 +1,22 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
+import { QuanlyhopthuComponent } from './client/HopThu-Component/quanlyhopthu/quanlyhopthu.component';
+import { GuithuComponent } from './client/HopThu-Component/guithu/guithu.component';
+import { XemthuComponent } from './client/HopThu-Component/xemthu/xemthu.component';
+import { ThongtinchokhachComponent } from './client/XemThongTinWebsite/thongtinchokhach/thongtinchokhach.component';
+
+const routes: Routes = [
+  {
+    path: "listthu", component: QuanlyhopthuComponent
+  }, {
+    path: "xemthu/:id", component: XemthuComponent
+  },
+  {
+    path: "thongtinchokhach",component: ThongtinchokhachComponent
+  }
+
+
 import { LayoutAdminComponent } from './quantrivien/layout/layout-admin/layout-admin.component';
 import { QuanLyThanhVienComponent } from './quantrivien/quanlythanhvien/quan-ly-thanh-vien/quan-ly-thanh-vien.component';
 import { PhanHoiComponent } from './quantrivien/quanlythanhvien/phan-hoi/phan-hoi.component';
@@ -31,6 +48,7 @@ const routes: Routes = [
       { path: 'dang-thong-bao', component: DangThongBaoComponent }
     ]
   }
+
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
