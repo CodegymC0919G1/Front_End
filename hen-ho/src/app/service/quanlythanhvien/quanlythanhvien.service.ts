@@ -10,12 +10,8 @@ export class QuanlythanhvienService {
 
   private baseUrl = 'http://localhost:8080/qlthanhvien';
 
-  getAll(isVip: string, curentPage, size, search): Observable<any> {
-    return this.http.get((this.baseUrl + '/get/' + isVip), {
-      params: {
-        page: curentPage, size: size, search: search
-      }
-    });
+  getAll(isVip: string): Observable<any> {
+    return this.http.get(this.baseUrl + '/get/' + isVip);
   }
   getThanhVien(id: number): Observable<any> {
     return this.http.get(this.baseUrl + '/' + id);
