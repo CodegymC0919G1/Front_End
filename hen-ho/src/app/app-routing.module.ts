@@ -1,8 +1,3 @@
-
-
-
-
-
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DangkiComponent } from './client/dangki/dangki.component';
@@ -24,16 +19,16 @@ import { LoginAdminComponent } from './quantrivien/login-admin/login-admin/login
 import { ListThongbaoComponent } from './quantrivien/thong-bao/list-thongbao/list-thongbao.component';
 
 const routes: Routes = [
-    {
+  {
     path: "listthu", component: QuanlyhopthuComponent
   }, {
     path: "xemthu/:id", component: XemthuComponent
   },
   {
-    path: "thongtinchokhach",component: ThongtinchokhachComponent
-  }
+    path: "thongtinchokhach", component: ThongtinchokhachComponent
+  },
     { path: 'register', component: DangkiComponent },
-  { path: 'updateInfor', component: KhoitaothongtinComponent},
+  { path: 'updateInfor', component: KhoitaothongtinComponent },
   {
     path: 'loginAD', component: LoginAdminComponent
   },

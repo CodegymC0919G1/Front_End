@@ -25,16 +25,13 @@ import { XembaidangComponent } from './quantrivien/quanlybaidang/xembaidang/xemb
 import { SuabaidangComponent } from './quantrivien/quanlybaidang/suabaidang/suabaidang.component';
 import { DanhsachbaidangComponent } from './quantrivien/quanlybaidang/danhsachbaidang/danhsachbaidang.component';
 
-
-
 import { XemloimoiketbanComponent } from './client/ketban/xemloimoiketban/xemloimoiketban.component';
 import { GuiloimoiketbanComponent } from './client/ketban/guiloimoiketban/guiloimoiketban.component';
 import { XemdanhsachbanbeComponent } from './client/ketban/xemdanhsachbanbe/xemdanhsachbanbe.component';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
-import { MDBBootstrapModule,DropdownModule  } from 'angular-bootstrap-md';
+import { MDBBootstrapModule, DropdownModule  } from 'angular-bootstrap-md';
 import { ThongtinchokhachComponent } from './client/XemThongTinWebsite/thongtinchokhach/thongtinchokhach.component';
 import { ThongtinchothanhvienComponent } from './client/XemThongTinWebsite/thongtinchothanhvien/thongtinchothanhvien.component';
 import { ThongtinchoquantrivienComponent } from './client/XemThongTinWebsite/thongtinchoquantrivien/thongtinchoquantrivien.component';
@@ -112,18 +109,15 @@ export function getAuthServiceConfigs() {
     DropdownModule.forRoot(),
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
-  providers: [],
   bootstrap: [AppComponent],
   entryComponents: [GuithuComponent],
-    HttpClientModule
-  ],
   providers: [
     {
       provide: AuthServiceConfig,
       useFactory: getAuthServiceConfigs,
     },
     httpInterceptorProviders
-  ],
-  bootstrap: [AppComponent]
+  ]
+
 })
 export class AppModule { }
