@@ -9,7 +9,7 @@ import { SlideComponent } from './client/layout/slide/slide.component';
 import { QuanlyhopthuComponent } from './client/HopThu-Component/quanlyhopthu/quanlyhopthu.component';
 import { XemthuComponent } from './client/HopThu-Component/xemthu/xemthu.component';
 import { GuithuComponent } from './client/HopThu-Component/guithu/guithu.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DangkiComponent } from './client/dangki/dangki.component';
 import { KhoitaothongtinComponent } from './client/khoitaothongtin/khoitaothongtin.component';
 import { DanhSachHoiNhomComponent } from './quantrivien/quanlihoinhom/danh-sach-hoi-nhom/danh-sach-hoi-nhom.component';
@@ -26,6 +26,11 @@ import { XembaidangComponent } from './quantrivien/quanlybaidang/xembaidang/xemb
 import { SuabaidangComponent } from './quantrivien/quanlybaidang/suabaidang/suabaidang.component';
 import { DanhsachbaidangComponent } from './quantrivien/quanlybaidang/danhsachbaidang/danhsachbaidang.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -50,16 +55,20 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     DangbaiComponent,
     XembaidangComponent,
     SuabaidangComponent,
-    DanhsachbaidangComponent
+    DanhsachbaidangComponent,
+    
+ 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ShareModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers:[],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
