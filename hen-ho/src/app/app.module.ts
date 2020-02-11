@@ -26,8 +26,16 @@ import { XembaidangComponent } from './quantrivien/quanlybaidang/xembaidang/xemb
 import { SuabaidangComponent } from './quantrivien/quanlybaidang/suabaidang/suabaidang.component';
 import { DanhsachbaidangComponent } from './quantrivien/quanlybaidang/danhsachbaidang/danhsachbaidang.component';
 
+
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
+
+import { QuanLyThanhVienComponent } from './quantrivien/quanlythanhvien/quan-ly-thanh-vien/quan-ly-thanh-vien.component';
+import { PhanHoiComponent } from './quantrivien/quanlythanhvien/phan-hoi/phan-hoi.component';
+import { LayoutAdminComponent } from './quantrivien/layout/layout-admin/layout-admin.component';
+import { XemloimoiketbanComponent } from './client/ketban/xemloimoiketban/xemloimoiketban.component';
+import { GuiloimoiketbanComponent } from './client/ketban/guiloimoiketban/guiloimoiketban.component';
+import { XemdanhsachbanbeComponent } from './client/ketban/xemdanhsachbanbe/xemdanhsachbanbe.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +61,12 @@ import { HttpClientModule } from '@angular/common/http';
     XembaidangComponent,
     SuabaidangComponent,
     DanhsachbaidangComponent,
+    QuanLyThanhVienComponent,
+    PhanHoiComponent,
+    LayoutAdminComponent,
+    XemloimoiketbanComponent,
+    GuiloimoiketbanComponent,
+    XemdanhsachbanbeComponent
   ],
   imports: [
     BrowserModule,
@@ -61,8 +75,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     NgbModule,
     ReactiveFormsModule,
-    HttpClientModule,
-
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

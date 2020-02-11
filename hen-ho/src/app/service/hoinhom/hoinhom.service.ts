@@ -36,4 +36,10 @@ export class HoiNhomService {
   getNhomThanhVien(id:number): Observable<any> {
     return this.http.get(this.baseUrl + '/nhomthanhvien/' + id);
   }
+  getNoiDung(id:number):Observable<any>{
+    return this.http.get(this.baseUrl + '/noidungdangtrongnhom/' + id);
+  }
+  getSoThanhVien(id:number):Observable<any>{
+    return this.http.get(this.baseUrl + '/sothanhvien/' + id);
+  }
 }

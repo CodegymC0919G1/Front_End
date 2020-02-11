@@ -3,53 +3,32 @@
 <div class="container">
   <h2>Quản lí hội nhóm</h2><br>
   <br>
-  <table class="table table-hover">
-    <thead class="btn-pink-moon">
+  <table class="table table-hover mt-2 border rounded" style="background: white;">
+    <thead >
       <tr>
         <th>Tên hội nhóm</th>
         <th>Ngày thành lập</th>
-        <!-- <th>Số thành viên</th> -->
+        <th>Số thành viên</th>
         <th>Số lần cảnh cáo</th>
       </tr>
     </thead>
-    <tbody class="bg">
+    <tbody >
       <tr
         *ngFor="let hn of hoiNhomList | paginate: { itemsPerPage: 10, currentPage: p }" >
         <td>
-          <a [routerLink]="['/detailhoinhom/',hn.idHoiNhom]">{{hn.tenHoiNhom}}</a>
+          <a [routerLink]="['/admin/quan-ly-hoi-nhom/',hn.idHoiNhom]">{{hn.tenHoiNhom}}</a>
         </td>
         <td>
-          {{hn.ngayThanhLap}}
+          {{hn.ngayThanhLap | date: 'dd/MM/yyyy'}}
         </td>
-        <!-- <td>
+        <td>
           {{hn.soThanhVien}}
-        </td> -->
+        </td>
         <td>
           {{hn.soLanCanhCao}}
         </td>
       </tr>
     </tbody>
   </table>
-  <pagination-controls (pageChange)="p = $event"></pagination-controls>
-  <!-- <div class="row">
-    <div class="col-sm-8"></div>
-    <div class="col-sm-4">
-      <ul class="pagination">
-        <li class="page-item disabled">
-          <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-        </li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item active" aria-current="page">
-          <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">4</a></li>
-        <li class="page-item">
-          <a class="page-link" href="#">Next</a>
-        </li>
-      </ul>
-    </div> -->
-    <!-- <div class="col-sm-2"></div> -->
-
-  <!-- </div> -->
+  <pagination-controls (pageChange)="p = $event" class="row justify-content-end"></pagination-controls>
 </div>
