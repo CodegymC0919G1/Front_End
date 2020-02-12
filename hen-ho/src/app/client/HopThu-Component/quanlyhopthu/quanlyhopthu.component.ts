@@ -35,11 +35,12 @@ export class QuanlyhopthuComponent implements OnInit {
   }
 
   openGuiThu() {
+    
     const dialogConfig = new MatDialogConfig();
-    dialogConfig.disableClose = true;
+    dialogConfig.disableClose = true;  
     dialogConfig.id = 'modal-component';
-    dialogConfig.height = '90%';
-    dialogConfig.width = '40%';
+    dialogConfig.height = '500px';
+    dialogConfig.width = '500px';
     const modalDialog = this.matDialog.open(GuithuComponent, dialogConfig);
   }
 

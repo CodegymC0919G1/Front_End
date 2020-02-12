@@ -79,7 +79,6 @@ export function getAuthServiceConfigs() {
     GuiloimoiketbanComponent,
     XemdanhsachbanbeComponent,
     ThongtinchokhachComponent
-
   ],
   imports: [
     BrowserModule,
