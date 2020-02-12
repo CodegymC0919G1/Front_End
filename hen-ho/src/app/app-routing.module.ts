@@ -3,8 +3,6 @@ import { KhoitaothongtinComponent } from "./client/khoitaothongtin/khoitaothongt
 import { QuanlyhopthuComponent } from "./client/HopThu-Component/quanlyhopthu/quanlyhopthu.component";
 import { GuithuComponent } from "./client/HopThu-Component/guithu/guithu.component";
 import { XemthuComponent } from "./client/HopThu-Component/xemthu/xemthu.component";
-
-
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LayoutAdminComponent } from './quantrivien/layout/layout-admin/layout-admin.component';
@@ -18,8 +16,6 @@ import { SuabaidangComponent } from './quantrivien/quanlybaidang/suabaidang/suab
 import { DanhsachbaidangComponent } from './quantrivien/quanlybaidang/danhsachbaidang/danhsachbaidang.component';
 import { LoginAdminComponent } from './quantrivien/login-admin/login-admin/login-admin.component';
 import { ListThongbaoComponent } from './quantrivien/thong-bao/list-thongbao/list-thongbao.component';
-import { DangkiComponent } from './client/dangki/dangki.component';
-import { KhoitaothongtinComponent } from './client/khoitaothongtin/khoitaothongtin.component';
 
 const routes: Routes = [
   {
@@ -27,7 +23,7 @@ const routes: Routes = [
     component: LoginAdminComponent
   },
   { path: 'register', component: DangkiComponent },
-  { path: 'updateInfor', component: KhoitaothongtinComponent},
+  { path: 'updateInfor', component: KhoitaothongtinComponent },
   {
     path: "admin",
     component: LayoutAdminComponent,
@@ -55,4 +51,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
