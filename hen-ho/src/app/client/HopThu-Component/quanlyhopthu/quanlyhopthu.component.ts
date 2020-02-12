@@ -1,11 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Thu } from 'src/app/model/thu';
-import { ThuService } from './../../../service/thu/thu.service';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { GuithuComponent } from './../guithu/guithu.component';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { XemthuComponent } from './../xemthu/xemthu.component';
 import { Router } from '@angular/router';
+import { Thu } from 'src/app/model/thu';
 @Component({
   selector: 'app-quanlyhopthu',
   templateUrl: './quanlyhopthu.component.html',
@@ -38,13 +37,6 @@ export class QuanlyhopthuComponent implements OnInit {
     dialogConfig.width = "40%";
     const modalDialog = this.matDialog.open(GuithuComponent, dialogConfig);
   }
-  daXemThu(){
- 
-  }
-  chuaXemThua(){
-
-  }
-
   xemthu(id: number) {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.data = {

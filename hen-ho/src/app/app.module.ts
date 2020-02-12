@@ -24,15 +24,27 @@ import { DangbaiComponent } from './client/dangbai/dangbai/dangbai.component';
 import { XembaidangComponent } from './quantrivien/quanlybaidang/xembaidang/xembaidang.component';
 import { SuabaidangComponent } from './quantrivien/quanlybaidang/suabaidang/suabaidang.component';
 import { DanhsachbaidangComponent } from './quantrivien/quanlybaidang/danhsachbaidang/danhsachbaidang.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
-import {HttpClientModule} from '@angular/common/http';
-import { ThongtinchokhachComponent } from './client/XemThongTinWebsite/thongtinchokhach/thongtinchokhach.component';
-import { ThongtinchothanhvienComponent } from './client/XemThongTinWebsite/thongtinchothanhvien/thongtinchothanhvien.component';
-import { ThongtinchoquantrivienComponent } from './client/XemThongTinWebsite/thongtinchoquantrivien/thongtinchoquantrivien.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { DangNhapComponent } from './client/login/dang-nhap/dang-nhap.component';
+import { AuthServiceConfig } from 'angular-6-social-login';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { httpInterceptorProviders } from './auth/auth-interceptor';
+import { HttpClientModule } from '@angular/common/http';
+import { ListThongbaoComponent } from './quantrivien/thong-bao/list-thongbao/list-thongbao.component';
+import { QuanLyThanhVienComponent } from './quantrivien/quanlythanhvien/quan-ly-thanh-vien/quan-ly-thanh-vien.component';
+import { PhanHoiComponent } from './quantrivien/quanlythanhvien/phan-hoi/phan-hoi.component';
+import { LayoutAdminComponent } from './quantrivien/layout/layout-admin/layout-admin.component';
+import { XemloimoiketbanComponent } from './client/ketban/xemloimoiketban/xemloimoiketban.component';
+import { GuiloimoiketbanComponent } from './client/ketban/guiloimoiketban/guiloimoiketban.component';
+import { XemdanhsachbanbeComponent } from './client/ketban/xemdanhsachbanbe/xemdanhsachbanbe.component';
+export function getAuthServiceConfigs() {
+  const config = new AuthServiceConfig(
+    []
+  );
+  return config;
+}
 
 @NgModule({
   declarations: [
@@ -58,12 +70,15 @@ import { DangNhapComponent } from './client/login/dang-nhap/dang-nhap.component'
     XembaidangComponent,
     SuabaidangComponent,
     DanhsachbaidangComponent,
-    ThongtinchokhachComponent,
-    ThongtinchothanhvienComponent,
-    ThongtinchoquantrivienComponent,
+    ListThongbaoComponent,
+    QuanLyThanhVienComponent,
+    PhanHoiComponent,
+    LayoutAdminComponent,
+    XemloimoiketbanComponent,
+    GuiloimoiketbanComponent,
+    XemdanhsachbanbeComponent
 
   ],
-  
   imports: [
     BrowserModule,
     ReactiveFormsModule,
@@ -78,9 +93,16 @@ import { DangNhapComponent } from './client/login/dang-nhap/dang-nhap.component'
     HttpClientModule,
   ],
   schemas: [],
-  providers: [],
-  bootstrap: [AppComponent],
   entryComponents: [GuithuComponent]
+  ],
+  providers: [
+    {
+      provide: AuthServiceConfig,
+      useFactory: getAuthServiceConfigs,
+    },
+    httpInterceptorProviders
+  ],
+  bootstrap: [AppComponent]
 
 })
 export class AppModule { }

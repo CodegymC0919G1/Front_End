@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GuithuComponent } from './guithu.component';
+import { XemloimoiketbanComponent } from './xemloimoiketban.component';
 
-describe('GuithuComponent', () => {
-  let component: GuithuComponent;
-  let fixture: ComponentFixture<GuithuComponent>;
+describe('XemloimoiketbanComponent', () => {
+  let component: XemloimoiketbanComponent;
+  let fixture: ComponentFixture<XemloimoiketbanComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GuithuComponent ]
+      declarations: [ XemloimoiketbanComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GuithuComponent);
+    fixture = TestBed.createComponent(XemloimoiketbanComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
