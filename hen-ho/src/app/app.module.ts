@@ -39,6 +39,7 @@ import { LayoutAdminComponent } from './quantrivien/layout/layout-admin/layout-a
 import { XemloimoiketbanComponent } from './client/ketban/xemloimoiketban/xemloimoiketban.component';
 import { GuiloimoiketbanComponent } from './client/ketban/guiloimoiketban/guiloimoiketban.component';
 import { XemdanhsachbanbeComponent } from './client/ketban/xemdanhsachbanbe/xemdanhsachbanbe.component';
+import {ThongtinchokhachComponent} from './client/XemThongTinWebsite/thongtinchokhach/thongtinchokhach.component';
 export function getAuthServiceConfigs() {
   const config = new AuthServiceConfig(
     []
@@ -76,7 +77,8 @@ export function getAuthServiceConfigs() {
     LayoutAdminComponent,
     XemloimoiketbanComponent,
     GuiloimoiketbanComponent,
-    XemdanhsachbanbeComponent
+    XemdanhsachbanbeComponent,
+    ThongtinchokhachComponent
 
   ],
   imports: [
@@ -93,8 +95,7 @@ export function getAuthServiceConfigs() {
     HttpClientModule,
   ],
   schemas: [],
-  entryComponents: [GuithuComponent]
-  ],
+  entryComponents: [GuithuComponent],
   providers: [
     {
       provide: AuthServiceConfig,

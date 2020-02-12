@@ -1,4 +1,4 @@
-import { ThanhVien } from './thanhvien';
+import { Thanhvien } from './thanhvien';
 
 export class Thu {
     id_thu: number;
@@ -7,8 +7,8 @@ export class Thu {
     thoi_gian_gui:Date;
     xem:boolean;
     xoa:boolean;
-    thanhVienGui:ThanhVien;
-    thanhVienNhan:ThanhVien;
-    constructor( id_thu:number, tieu_de:string, noi_dung:string,thoi_gian_gui:Date,xem:boolean,xoa:boolean, thanhVienGui:ThanhVien,thanhVienNhan:ThanhVien){}
+    thanhVienGui:Thanhvien;
+    thanhVienNhan:Thanhvien;
+    constructor( id_thu:number, tieu_de:string, noi_dung:string,thoi_gian_gui:Date,xem:boolean,xoa:boolean, thanhVienGui:Thanhvien,thanhVienNhan:Thanhvien){}
     
 }

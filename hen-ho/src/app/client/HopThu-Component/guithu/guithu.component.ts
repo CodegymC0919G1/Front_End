@@ -5,7 +5,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ThuService } from './../../../service/thu/thu.service';
 import { Router } from '@angular/router';
 import { ThanhvienService } from 'src/app/service/thanhvien/thanhvien.service';
-import { ThanhVien } from './../../../model/thanhvien';
+import { Thanhvien } from './../../../model/thanhvien';
 
 @Component({
   selector: 'app-guithu',
@@ -16,7 +16,7 @@ export class GuithuComponent implements OnInit {
   Contact:FormGroup;
   thu:any[];
   today=Date.now();
-  thanhVien:ThanhVien[]=[];
+  thanhVien:Thanhvien[]=[];
   constructor(public dialogRef: MatDialogRef<QuanlyhopthuComponent>,private fb:FormBuilder,
      private thuService: ThuService, private router:Router,private thanhVienService:ThanhvienService) { }
 
