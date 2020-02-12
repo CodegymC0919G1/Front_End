@@ -112,11 +112,8 @@ export function getAuthServiceConfigs() {
     DropdownModule.forRoot(),
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
-  providers: [],
   bootstrap: [AppComponent],
   entryComponents: [GuithuComponent],
-    HttpClientModule
-  ],
   providers: [
     {
       provide: AuthServiceConfig,
@@ -124,6 +121,5 @@ export function getAuthServiceConfigs() {
     },
     httpInterceptorProviders
   ],
-  bootstrap: [AppComponent]
 })
 export class AppModule { }
