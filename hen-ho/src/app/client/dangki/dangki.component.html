@@ -1,212 +1,98 @@
+
+
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 <div class="container">
-  <br>
-  <p class="text-center"> <a href="http://bootstrap-ecommerce.com/"> </a></p>
-  <hr>
-  <div class="card bg-light">
-    <article class="card-body mx-auto" style="max-width: 450px;">
-      <h4 class="card-title mt-3 text-center">Đăng Kí Thành Viên</h4>
-      <p class="text-center">Mời Bạn Đăng Kí Để Tham Gia Hẹn Hò</p>
+<br>  <p class="text-center"> <a href="http://bootstrap-ecommerce.com/"> </a></p>
+<hr>
 
-      <!-- <p>
-        <a href="https://twitter.com/login?lang=vi" class="btn btn-block btn-twitter"> <i class="fab fa-twitter"></i>  
-          Login via Twitter</a>
-        <a href="https://vi-vn.facebook.com/" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i>  
-          Login via facebook</a>
-      </p>
-
-      <p class="divider-text">
+<div class="card bg-light">
+<article class="card-body mx-auto" style="max-width: 450px;">
+	<h4 class="card-title mt-3 text-center">Đăng Kí Thành Viên</h4>
+	<p class="text-center">Mời Bạn Đăng Kí Để Tham Gia Hẹn Hò</p>
+	<p>
+		<a href="" class="btn btn-block btn-twitter"> <i class="fab fa-twitter"></i>   Login via Twitter</a>
+		<a href="" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i>   Login via facebook</a>
+	</p>
+	<p class="divider-text">
         <span class="bg-light">OR</span>
-      </p> -->
-      <div [hidden]="submitted" style="width: 400px;">
-        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-          <div class="form-group input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-            </div>
-            <input name="hoTen" id="hoTen" class="form-control" formControlName="hoTen" placeholder="Họ Tên"
-              type="text">
-          </div>
-          <div class="alert  alert-danger"
-            *ngIf="registerForm.get('hoTen').hasError('required') && registerForm.get('hoTen').touched">
-            Bạn không được để trống
-          </div>
+    </p>
+	<form>
+	<div class="form-group input-group">
+		<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+		 </div>
+        <input name="" class="form-control" placeholder="Họ Tên" type="text">
+    </div>
 
-          <div class="form-group input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-            </div>
-            <input name="userName" id="userName" class="form-control" formControlName="userName" placeholder="Tên Đăng Nhập"
-              type="text">
-          </div>
-          <div class="alert  alert-danger"
-            *ngIf="registerForm.get('userName').hasError('required') && registerForm.get('userName').touched">
-            Bạn không được để trống
-          </div>
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+		 </div>
+        <input name="" class="form-control" placeholder="Địa Chỉ Email" type="email">
+    </div>
 
-          <fieldset formGroupName="pfGroup">
-          <div class="form-group input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
-            </div>
-            <input name="email" id="email" class="form-control" formControlName="email" placeholder="Địa Chỉ Email"
-              type="text">
-          </div>
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+		 </div>
+        <input name="" class="form-control" placeholder="Xác Nhận Email" type="email">
+    </div> 
 
-          <div role="alert"
-              *ngIf="registerForm.get('pfGroup').get('email').invalid && registerForm.get('pfGroup').get('email').touched">
-              <div class="alert alert-danger"
-                *ngIf="registerForm.get('pfGroup').get('email').hasError('pattern')">Email phải đúng định dạng(abc@gmail.com)
-              </div>
-              <div class="alert alert-danger"
-                *ngIf="registerForm.get('pfGroup').get('email').hasError('required')">Bạn không được để trống
-              </div>
-            </div>
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+		</div>
+        <input class="form-control" placeholder="Mật Khẩu" type="password">
+    </div>
+     <!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+		</div>
+        <input class="form-control" placeholder="Nhập lại mật khẩu" type="password">
+    </div>
+     <!-- form-group// --> 
 
-          <div class="form-group input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
-            </div>
-            <input name="email" id="email" class="form-control" formControlName="confirmEmail" placeholder="Xác Nhận Email"
-              type="text">
-          </div>
+    <div class="form-group input-group">
+     <input name="" class="form-control" placeholder="Giới Tính" type="text">
+		<select class="custom-select" style="max-width: 120px;">
+		    <option selected="">chọn</option>
+		    <option value="1">Nam</option>
+		    <option value="2">Nữ</option>
+		</select>
+    </div>
 
-          <div role="alert"
-              *ngIf="registerForm.get('pfGroup').get('email').invalid && registerForm.get('pfGroup').get('email').touched">
-              <div class="alert alert-danger"
-                *ngIf="registerForm.get('pfGroup').get('email').hasError('required')">Bạn không được để trống
-              </div>
-            </div>
+    <div class="form-group input-group">
+      <input name="" class="form-control" placeholder="Ngày Sinh" type="text">
+     </div>
 
-        </fieldset>
-        
-        <div class="alert alert-danger" role="alert" *ngIf="registerForm.hasError('emailnotmatch', ['pfGroup']) &&
-         registerForm.get('pfGroup').touched">
-          Nhập Email trùng khớp
-        </div>
+    <div class="form-group input-group">
+      <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+       </div>
+          <input name="" class="form-control" placeholder="Nghề Nghiệp" type="text">
+     </div>
 
-       
-          <fieldset formGroupName="pwGroup">
+     <div class="form-group input-group">
+      <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+       </div>
+          <input name="" class="form-control" placeholder="Địa Chỉ" type="text">
+     </div>
 
-            <div class="form-group input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-              </div>
-              <input name="password" class="form-control" formControlName="password" placeholder="Mật Khẩu"
-                type="password">
-            </div>
-            <div role="alert"
-              *ngIf="registerForm.get('pwGroup').get('password').invalid && registerForm.get('pwGroup').get('password').touched">
-              <div class="alert alert-danger"
-                *ngIf="registerForm.get('pwGroup').get('password').hasError('pattern')">Mật khẩu bắt đầu bằng chữ,từ 8->15 kí tự,có thể chứa các kí tự số 
-              </div>
-              <div class="alert alert-danger"
-                *ngIf="registerForm.get('pwGroup').get('password').hasError('required')">Bạn không được để trống
-              </div>
-            </div>
+  
 
-            <div class="form-group input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-              </div>
-              <input class="form-control" formControlName="confirmPassword" placeholder="Nhập lại mật khẩu"
-                type="password">
-            </div>
-            <div role="alert"
-              *ngIf="registerForm.get('pwGroup').get('password').invalid && registerForm.get('pwGroup').get('password').touched">
-              <div class="alert alert-danger"
-                *ngIf="registerForm.get('pwGroup').get('password').hasError('required')">Bạn không được để trống
-              </div>
-            </div>
-          </fieldset>
-
-          <div class="alert alert-danger" role="alert" *ngIf="registerForm.hasError('passwordnotmatch', ['pwGroup']) &&
-          registerForm.get('pwGroup').touched">
-           Nhập mật khẩu trùng khớp
-        </div>
-
-
-          <!-- form-group// -->
-
-          <div class="form-group input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-            </div>
-            <select class="form-control" formControlName="gioiTinh" [value]="-1">
-              <option value="-1"> Chọn giới tính</option>
-              <option value="Nam">Nam</option>
-              <option value="Nu">Nữ</option>
-            </select>
-          </div>
-
-          <div class="alert  alert-danger"
-            *ngIf="registerForm.get('gioiTinh').hasError('required') && registerForm.get('gioiTinh').touched">
-            Bạn không đc để trống
-          </div>
-          
-          <div class="form-group input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-          </div>
-          <select class="form-control">
-            <option> Ngày Sinh</option>
-          </select>
-          <input name="ngaySinh" id="ngaySinh" class="form-control" formControlName="ngaySinh" type="date">
-          </div>
-
-          <div class="alert  alert-danger"
-          *ngIf="registerForm.get('ngaySinh').hasError('required') && registerForm.get('ngaySinh').touched">
-          Bạn không đc để trống
-          </div>
-          <div class="alert  alert-danger"
-          *ngIf="registerForm.get('ngaySinh').hasError('pattern') && registerForm.get('ngaySinh').touched">
-           Ngày Sinh phải đúng định dạng dd/mm/yy và bạn phải trên 18 tuổi
-          </div> 
-
-          <div class="form-group input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-            </div>
-            <input name="ngheNghiep" id="ngheNghiep" formControlName="ngheNghiep" class="form-control"
-              placeholder="Nghề Nghiệp" type="text">
-          </div>
-
-          <div class="alert  alert-danger"
-            *ngIf="registerForm.get('ngheNghiep').hasError('required') && registerForm.get('ngheNghiep').touched">
-            Bạn không đc để trống
-          </div>
-          <div class="form-group input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-            </div>
-            <input name="diaChi" id="diaChi" formControlName="diaChi"  class="form-control"
-              placeholder="Địa Chỉ" type="text">
-          </div>
-
-          <div class="alert  alert-danger"
-          *ngIf="registerForm.get('diaChi').hasError('required') && registerForm.get('diaChi').touched">
-          Bạn không đc để trống
-          </div>
-
-          <div class="form-group input-group">
-            <input type="checkbox" id="cb_aggreeTerm">
-            <label for="">Bằng việc nhấn vào nút đăng ký, tôi đã đồng ý với <a href="">Điều Khoản Sử Dụng </a>và <a
-                href="">Chính Sách Bảo Mật </a>của HenHo</label>
-          </div>
-
-          <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block">Đăng Kí</button>
-          </div> <!-- form-group// -->
-
-          <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block" style="background-color: brown;">Hủy Bỏ</button>
-          </div>
-          <!-- form-group// -->
-          <p class="text-center">Bạn đã có tài khoản? <a href="">Đăng Nhập</a> </p>
-        </form>
-      </div>
-
-      <div [hidden]="!submitted">
-        <h4>Bạn đã đăng kí xong mời bạn khởi tạo thông tin!</h4>
-        <button class="btn btn-success" (click)="newThanhvien()" routerLink="add">Khởi Tạo Thông Tin</button>
-      </div>
+     <div class="form-group input-group">
+      <input type="checkbox" id="cb_aggreeTerm">
+      <label for="">Bằng việc nhấn vào nút đăng ký, tôi đã đồng ý với <a href="">Điều Khoản Sử Dụng </a>và <a href="">Chính Sách Bảo Mật </a>của HenHo</label>
+    </div>
+                                          
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block"> Đăng Kí  </button>
+    </div> <!-- form-group// -->   
+    
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary btn-block" style="background-color: brown;"> Hủy Bỏ  </button>
+  </div> <!-- form-group// -->  
+    <p class="text-center">Have an account? <a href="">Log In</a> </p>                                                                 
+</form>
