@@ -1,3 +1,4 @@
+import { ThongbaoDetalComponent } from './quantrivien/thong-bao/thongbao-detal/thongbao-detal.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LayoutAdminComponent } from './quantrivien/layout/layout-admin/layout-admin.component';
@@ -22,7 +23,8 @@ const routes: Routes = [
       { path: '', component: QuanLyThanhVienComponent },
       { path: 'quan-ly-thanh-vien', component: QuanLyThanhVienComponent },
       { path: 'phan-hoi', component: PhanHoiComponent },
-      { path: 'thong-bao/list', component: ListThongbaoComponent },
+      { path: 'thong-bao', component: ListThongbaoComponent },
+      { path: 'thong-bao/:id', component: ThongbaoDetalComponent },
       { path: 'quan-ly-hoi-nhom', component: DanhSachHoiNhomComponent },
       { path: 'quan-ly-hoi-nhom/:id', component: ChiTietHoiNhomComponent },
       { path: 'quan-ly-hoi-nhom/thong-tin-nhom/:id', component: ThongTinCuaNhomComponent },

@@ -25,7 +25,7 @@ import { XembaidangComponent } from './quantrivien/quanlybaidang/xembaidang/xemb
 import { SuabaidangComponent } from './quantrivien/quanlybaidang/suabaidang/suabaidang.component';
 import { DanhsachbaidangComponent } from './quantrivien/quanlybaidang/danhsachbaidang/danhsachbaidang.component';
 
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgbModule, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 import { DangNhapComponent } from './client/login/dang-nhap/dang-nhap.component';
 import { AuthServiceConfig } from 'angular-6-social-login';
 import { httpInterceptorProviders } from './auth/auth-interceptor';
@@ -34,6 +34,9 @@ import { ListThongbaoComponent } from './quantrivien/thong-bao/list-thongbao/lis
 import { QuanLyThanhVienComponent } from './quantrivien/quanlythanhvien/quan-ly-thanh-vien/quan-ly-thanh-vien.component';
 import { PhanHoiComponent } from './quantrivien/quanlythanhvien/phan-hoi/phan-hoi.component';
 import { LayoutAdminComponent } from './quantrivien/layout/layout-admin/layout-admin.component';
+import { ListTbComponent } from './client/thongbao/list-tb/list-tb.component';
+import { ThongbaoDetalComponent } from './quantrivien/thong-bao/thongbao-detal/thongbao-detal.component';
+import { TimKiemComponent } from './client/timkiem/tim-kiem/tim-kiem.component';
 
 export function getAuthServiceConfigs() {
   const config = new AuthServiceConfig(
@@ -67,10 +70,12 @@ export function getAuthServiceConfigs() {
     SuabaidangComponent,
     DanhsachbaidangComponent,
     ListThongbaoComponent,
-
     QuanLyThanhVienComponent,
     PhanHoiComponent,
-    LayoutAdminComponent
+    LayoutAdminComponent,
+    ListTbComponent,
+    ThongbaoDetalComponent,
+    TimKiemComponent
 
   ],
   imports: [
@@ -80,12 +85,16 @@ export function getAuthServiceConfigs() {
     ShareModule,
     FormsModule,
     NgbModule,
+    // NgbModule.forRoot(),
     HttpClientModule
   ],
   providers: [
     {
       provide: AuthServiceConfig,
       useFactory: getAuthServiceConfigs,
+    },
+    {
+      provide: NgbActiveModal,
     },
     httpInterceptorProviders
   ],
