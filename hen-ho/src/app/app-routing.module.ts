@@ -50,6 +50,7 @@ const routes: Routes = [
       {path: 'dang-thong-bao', component: DangThongBaoComponent}
     ]
   },
+  
   {
     path: 'listthu', component: QuanlyhopthuComponent
   }, {
