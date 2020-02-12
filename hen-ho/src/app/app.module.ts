@@ -24,9 +24,10 @@ import { DangbaiComponent } from './client/dangbai/dangbai/dangbai.component';
 import { XembaidangComponent } from './quantrivien/quanlybaidang/xembaidang/xembaidang.component';
 import { SuabaidangComponent } from './quantrivien/quanlybaidang/suabaidang/suabaidang.component';
 import { DanhsachbaidangComponent } from './quantrivien/quanlybaidang/danhsachbaidang/danhsachbaidang.component';
+
+import {NgbModule, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { DangNhapComponent } from './client/login/dang-nhap/dang-nhap.component';
 import { AuthServiceConfig } from 'angular-6-social-login';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -36,6 +37,10 @@ import { ListThongbaoComponent } from './quantrivien/thong-bao/list-thongbao/lis
 import { QuanLyThanhVienComponent } from './quantrivien/quanlythanhvien/quan-ly-thanh-vien/quan-ly-thanh-vien.component';
 import { PhanHoiComponent } from './quantrivien/quanlythanhvien/phan-hoi/phan-hoi.component';
 import { LayoutAdminComponent } from './quantrivien/layout/layout-admin/layout-admin.component';
+import { ListTbComponent } from './client/thongbao/list-tb/list-tb.component';
+import { ThongbaoDetalComponent } from './quantrivien/thong-bao/thongbao-detal/thongbao-detal.component';
+import { TimKiemComponent } from './client/timkiem/tim-kiem/tim-kiem.component';
+
 import { XemloimoiketbanComponent } from './client/ketban/xemloimoiketban/xemloimoiketban.component';
 import { GuiloimoiketbanComponent } from './client/ketban/guiloimoiketban/guiloimoiketban.component';
 import { XemdanhsachbanbeComponent } from './client/ketban/xemdanhsachbanbe/xemdanhsachbanbe.component';
@@ -72,9 +77,13 @@ export function getAuthServiceConfigs() {
     SuabaidangComponent,
     DanhsachbaidangComponent,
     ListThongbaoComponent,
+
     QuanLyThanhVienComponent,
     PhanHoiComponent,
     LayoutAdminComponent,
+    ListTbComponent,
+    ThongbaoDetalComponent,
+    TimKiemComponent,
     XemloimoiketbanComponent,
     GuiloimoiketbanComponent,
     XemdanhsachbanbeComponent,
@@ -88,10 +97,8 @@ export function getAuthServiceConfigs() {
     FormsModule,
     NgbModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule,
     MatButtonModule,
-    MatDialogModule,
-    HttpClientModule,
+    MatDialogModule
   ],
   schemas: [],
   entryComponents: [GuithuComponent],
@@ -100,9 +107,11 @@ export function getAuthServiceConfigs() {
       provide: AuthServiceConfig,
       useFactory: getAuthServiceConfigs,
     },
+    {
+      provide: NgbActiveModal,
+    },
     httpInterceptorProviders
   ],
   bootstrap: [AppComponent]
-
 })
 export class AppModule { }

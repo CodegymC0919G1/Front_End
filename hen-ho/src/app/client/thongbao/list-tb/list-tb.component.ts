@@ -1,21 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { ThongBaoService } from './../../../service/thongbao/thongbao.service';
-import { ThongBao } from './../../../model/thongbao';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ThongBao } from 'src/app/model/thongbao';
+import { FormGroup, FormBuilder } from '@angular/forms';
+import { ThongBaoService } from 'src/app/service/thongbao/thongbao.service';
 import { ActivatedRoute } from '@angular/router';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-
 
 @Component({
-  selector: 'app-list-thongbao',
-  templateUrl: './list-thongbao.component.html',
-  styleUrls: ['./list-thongbao.component.scss']
+  selector: 'app-list-tb',
+  templateUrl: './list-tb.component.html',
+  styleUrls: ['./list-tb.component.scss']
 })
-export class ListThongbaoComponent implements OnInit {
+export class ListTbComponent implements OnInit {
   thongbao: ThongBao;
   thongbaoForm: FormGroup;
   thongbaoList: ThongBao[] = [];
-  id: number;
 
   constructor(
     private thongbaoService: ThongBaoService,
