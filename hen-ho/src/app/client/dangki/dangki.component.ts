@@ -5,7 +5,6 @@ import { Thanhvien } from 'src/app/model/thanhvien';
 import { Router } from '@angular/router';
 import { User } from 'src/app/model/user';
 
-
 function comparePassword(c: AbstractControl) {
   const v = c.value;
   return (v.password === v.confirmPassword) ? null : {
@@ -21,14 +20,16 @@ function compareEmail(c: AbstractControl) {
 }
 declare var require: any
 
+
+
+
+
 @Component({
   selector: 'app-dangki',
   templateUrl: './dangki.component.html',
   styleUrls: ['./dangki.component.scss']
 })
-
 export class DangkiComponent implements OnInit {
-
 
   registerForm: FormGroup;
 
@@ -36,7 +37,6 @@ export class DangkiComponent implements OnInit {
 
   user: User;
   submitted = false;
-
 
   constructor(private thanhvienService: ThanhvienService, private fb: FormBuilder, private router: Router,) { }
 
@@ -104,5 +104,4 @@ export class DangkiComponent implements OnInit {
   onSubmit() {
     this.save();
   }
-
 }

@@ -5,6 +5,8 @@ import { ThanhvienService } from 'src/app/service/thanhvien/thanhvien.service';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 
+
+
 @Component({
   selector: 'app-khoitaothongtin',
   templateUrl: './khoitaothongtin.component.html',
@@ -93,5 +95,5 @@ export class KhoitaothongtinComponent implements OnInit {
     this.imgURL = reader.result;
  };
 }
-}
 
+}

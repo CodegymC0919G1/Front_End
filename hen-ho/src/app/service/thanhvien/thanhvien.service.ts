@@ -7,8 +7,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ThanhvienService {
+
   private baseUrl = 'http://localhost:8080/api/thanhviens';
   private baseUploadUrl = 'http://localhost:8080/api/upload';
+
 
   constructor(private http: HttpClient) { }
 
@@ -30,4 +32,5 @@ export class ThanhvienService {
   getThanhvienList(): Observable<any> {
     return this.http.get(this.baseUrl);
   }
+
 }
