@@ -39,7 +39,6 @@ import { LayoutAdminComponent } from './quantrivien/layout/layout-admin/layout-a
 import { XemloimoiketbanComponent } from './client/ketban/xemloimoiketban/xemloimoiketban.component';
 import { GuiloimoiketbanComponent } from './client/ketban/guiloimoiketban/guiloimoiketban.component';
 import { XemdanhsachbanbeComponent } from './client/ketban/xemdanhsachbanbe/xemdanhsachbanbe.component';
-import {ThongtinchokhachComponent} from './client/XemThongTinWebsite/thongtinchokhach/thongtinchokhach.component';
 export function getAuthServiceConfigs() {
   const config = new AuthServiceConfig(
     []
@@ -77,8 +76,8 @@ export function getAuthServiceConfigs() {
     LayoutAdminComponent,
     XemloimoiketbanComponent,
     GuiloimoiketbanComponent,
-    XemdanhsachbanbeComponent,
-    ThongtinchokhachComponent
+    XemdanhsachbanbeComponent
+
 
   ],
   imports: [
@@ -89,7 +88,6 @@ export function getAuthServiceConfigs() {
     FormsModule,
     NgbModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule,
     MatButtonModule,
     MatDialogModule,
     HttpClientModule,
@@ -104,6 +102,5 @@ export function getAuthServiceConfigs() {
     httpInterceptorProviders
   ],
   bootstrap: [AppComponent]
-
 })
 export class AppModule { }

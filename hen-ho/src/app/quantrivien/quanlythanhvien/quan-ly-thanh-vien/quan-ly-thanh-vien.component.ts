@@ -8,13 +8,22 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
   styleUrls: ['./quan-ly-thanh-vien.component.scss']
 })
 export class QuanLyThanhVienComponent implements OnInit {
-  thanhviens: Array<QlThanhVien>;
+  isSearch = false;
   thanhvien: QlThanhVien = new QlThanhVien();
   formRadio: FormGroup;
+  size = 10;
+  thanhVienPage: any;
+  thanhViens: QlThanhVien[] = [];
+  totalPages = 1;
+  pageClicked = 0;
+  pages: [];
+  search = '';
+  vip = 'all';
+  isError = false;
   constructor(private thanhVienService: QuanlythanhvienService, private fb: FormBuilder) { }
 
   ngOnInit() {
-    this.onSubmit('a');
+    this.onSubmit(this.vip, 0);
     this.formRadio = this.fb.group({
       isVip: ['all']
     });
@@ -29,12 +38,63 @@ export class QuanLyThanhVienComponent implements OnInit {
         );
       });
   }
-  onSubmit(form) {
-    console.log(form);
-    this.thanhVienService.getAll(form.isVip).subscribe(
-      data => this.thanhviens = data
+  onSubmit(form, page) {
+    this.vip = form;
+    console.log(this.totalPages);
+    this.thanhVienService.getAll(this.vip, page, this.size, this.search).subscribe(
+      data => {
+        this.pageClicked = page;
+        this.thanhVienPage = data;
+        if (this.thanhViens.length === 0) {
+          this.isError = true;
+        }
+        this.thanhViens = this.thanhVienPage.content;
+        if (this.thanhViens.length === 0) {
+          this.onPrevious();
+          this.isError = true;
+        }
+        if (this.thanhViens.length !== 0) {
+          this.isError = false;
+        }
+        console.log(this.thanhViens);
+        this.totalPages = this.thanhVienPage.totalPages;
+        this.pages = Array.apply(null, { length: this.totalPages }).map(Number.call, Number);
+      }
     );
-
+  }
+  onNext() {
+    if (this.pageClicked < this.totalPages - 1) {
+      this.pageClicked++;
+      this.onSubmit(this.vip, this.pageClicked);
+    }
+  }
+  onPrevious() {
+    if (this.pageClicked > 0) {
+      this.pageClicked--;
+      this.onSubmit(this.vip, this.pageClicked);
+    }
+  }
+  onFirst() {
+    this.pageClicked = 0;
+    this.onSubmit(this.vip, this.pageClicked);
+  }
+  onLast() {
+    this.pageClicked = this.totalPages - 1;
+    this.onSubmit(this.vip, this.pageClicked);
+  }
+  searchName() {
+    if (this.search === '') {
+      this.isSearch = false;
+      this.ngOnInit();
+    } else {
+      this.isSearch = true;
+      this.onSubmit(this.vip, 0);
+    }
+  }
+  backToSearch() {
+    this.search = '';
+    this.isSearch = false;
+    this.ngOnInit();
   }
 }
 
