@@ -69,7 +69,6 @@ export function getAuthServiceConfigs() {
     SuabaidangComponent,
     DanhsachbaidangComponent,
     ListThongbaoComponent,
-
     QuanLyThanhVienComponent,
     PhanHoiComponent,
     LayoutAdminComponent,

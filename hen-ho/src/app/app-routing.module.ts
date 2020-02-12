@@ -18,12 +18,16 @@ import { SuabaidangComponent } from './quantrivien/quanlybaidang/suabaidang/suab
 import { DanhsachbaidangComponent } from './quantrivien/quanlybaidang/danhsachbaidang/danhsachbaidang.component';
 import { LoginAdminComponent } from './quantrivien/login-admin/login-admin/login-admin.component';
 import { ListThongbaoComponent } from './quantrivien/thong-bao/list-thongbao/list-thongbao.component';
+import { DangkiComponent } from './client/dangki/dangki.component';
+import { KhoitaothongtinComponent } from './client/khoitaothongtin/khoitaothongtin.component';
 
 const routes: Routes = [
   {
     path: "loginAD",
     component: LoginAdminComponent
   },
+  { path: 'register', component: DangkiComponent },
+  { path: 'updateInfor', component: KhoitaothongtinComponent},
   {
     path: "admin",
     component: LayoutAdminComponent,
