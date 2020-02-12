@@ -1,5 +1,4 @@
 import { User } from './user';
-
 export class Thanhvien {
     idThanhVien:number;
     hoTen:string;
@@ -15,7 +14,7 @@ export class Thanhvien {
     luotThich:number;
     trangThaiDangNhap:number;
     khoa:boolean;
-    mucDichThamGia:string
+    mucDichThamGia:string;
     user:User;
     contructor() {}
   }
