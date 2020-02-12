@@ -44,8 +44,6 @@ export class DangkiComponent implements OnInit {
 
   ngOnInit() {
 
-    
-
     this.registerForm = this.fb.group({
       hoTen: ['', [Validators.required,]],
       ngaySinh: ['', [Validators.required, Validators.pattern(/^(19[4-9][0-9]|2001|2000)\-(0[1-9]|1[0-2])\-((0[1-9])|([1-2][0-9])|(3[0-1]))$/)]],

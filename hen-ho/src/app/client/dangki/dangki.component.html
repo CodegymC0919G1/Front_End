@@ -56,7 +56,7 @@
           <div role="alert"
               *ngIf="registerForm.get('pfGroup').get('email').invalid && registerForm.get('pfGroup').get('email').touched">
               <div class="alert alert-danger"
-                *ngIf="registerForm.get('pfGroup').get('email').hasError('pattern')">Email phải đúng định dạng(abc@gmail.com)
+                *ngIf="registerForm.get('pfGroup').get('email').hasError('pattern')">Email phải đúng định dạng(abc@gmail.com),không được trùng lặp email người khác
               </div>
               <div class="alert alert-danger"
                 *ngIf="registerForm.get('pfGroup').get('email').hasError('required')">Bạn không được để trống
@@ -122,8 +122,6 @@
           registerForm.get('pwGroup').touched">
            Nhập mật khẩu trùng khớp
         </div>
-
-
           <!-- form-group// -->
 
           <div class="form-group input-group">
