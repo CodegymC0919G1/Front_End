@@ -15,14 +15,14 @@
             class="fa fa-envelope-open"></i> Thư đã đọc</button>
       </div>
       <div style="margin-top: 1em;">
-        <button type="button" class="btn btn-info btn-lg" data-whatever="@getbootstrap"><i
-            class="fa fa-envelope"></i> Thư chưa đọc</button>
+        <button type="button" class="btn btn-info btn-lg" data-whatever="@getbootstrap"><i class="fa fa-envelope"></i>
+          Thư chưa đọc</button>
       </div>
       <div style="margin-top: 1em;">
         <button type="button" class="btn btn-info btn-lg" data-whatever="@getbootstrap"><i
             class="fa fa-envelope-open"></i> Thư đã gửi</button>
       </div>
-      
+
       <div style="margin-top: 1em;">
         <button type="button" class="btn btn-info btn-lg" data-whatever="@getbootstrap"><i
             class="fa fa-envelope-open"></i> Thư đã nhận</button>
@@ -35,6 +35,29 @@
     </div>
     <div class="f-grid-col2 col-md-9" id="exampleModalHopThu">
       <h1 style="text-align: center;">Hộp Thư</h1>
+      <div>
+        <button type="button" class="btn btn-info btn-lg" (click)="openGuiThu()" style="margin-bottom: 5px;"> <i class='far fa-paper-plane'></i>Gửi
+          thư</button>
+      </div>
+      <!-- radiobutton -->
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-info active">
+          <input type="radio" name="options" id="option1" autocomplete="off" checked> Tất cả thư
+        </label>
+        <label class="btn btn-info">
+          <input type="radio" name="options" id="option2" autocomplete="off"> Thư đã xem
+        </label>
+        <label class="btn btn-info">
+          <input type="radio" name="options" id="option3" autocomplete="off"> Thư chưa xem
+        </label>
+        <label class="btn btn-info">
+          <input type="radio" name="options" id="option3" autocomplete="off"> Thư đã gửi
+        </label>
+        <label class="btn btn-info">
+          <input type="radio" name="options" id="option3" autocomplete="off"> Thư đã nhận
+        </label>
+      </div>
+      <!-- radiobutton -->
       <table class="table table-hover">
         <thead>
           <tr style="background-color: rgb(118, 118, 231);">
@@ -58,15 +81,13 @@
           <td>
             <a style="cursor: pointer; color: rgb(31, 187, 51);" (click)="xemthu(temp.idThu)"><i
                 class="fa fa-search"></i> </a>
-            <!-- <input type="button" (click)="xemthu(temp.idThu)" value="Xem thu"> -->
           </td>
           <td>
             <a style="cursor: pointer; color: red;" (click)="deleteThu(temp.idThu)"><i class="fa fa-trash-o"></i> </a>
           </td>
-          <!-- <td><input type="button"  (click)="deleteThu(temp.idThu)" value="Xóa"></td> -->
         </tr>
       </table>
-      <pagination-controls (pageChange)="p = $event" style="color: rgb(118, 118, 231);" ></pagination-controls>
+      <pagination-controls (pageChange)="p = $event" style="color: rgb(118, 118, 231);"></pagination-controls>
     </div>
   </div>
 </form>

@@ -34,10 +34,17 @@ export class QuanlyhopthuComponent implements OnInit {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
     dialogConfig.id = "modal-component";
-    dialogConfig.height = "100%";
+    dialogConfig.height = "90%";
     dialogConfig.width = "40%";
     const modalDialog = this.matDialog.open(GuithuComponent, dialogConfig);
   }
+  daXemThu(){
+ 
+  }
+  chuaXemThua(){
+
+  }
+
   xemthu(id: number) {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.data = {
@@ -46,7 +53,7 @@ export class QuanlyhopthuComponent implements OnInit {
     dialogConfig.disableClose = true;
     dialogConfig.id = "modal-component";
     dialogConfig.height = "90%";
-    dialogConfig.width = "60%";
+    dialogConfig.width = "50%";
     const modalDialog = this.matDialog.open(XemthuComponent, dialogConfig);
     // const modalDialog = this.matDialog.open(XemthuComponent, { 
     //   data: { id: id }, width: '350px', 

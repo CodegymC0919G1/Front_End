@@ -1,7 +1,6 @@
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { QuanlyhopthuComponent } from './client/HopThu-Component/quanlyhopthu/quanlyhopthu.component';
-import { GuithuComponent } from './client/HopThu-Component/guithu/guithu.component';
 import { XemthuComponent } from './client/HopThu-Component/xemthu/xemthu.component';
 import { ThongtinchokhachComponent } from './client/XemThongTinWebsite/thongtinchokhach/thongtinchokhach.component';
 
