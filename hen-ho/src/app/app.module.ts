@@ -34,7 +34,9 @@ import { ListThongbaoComponent } from './quantrivien/thong-bao/list-thongbao/lis
 import { QuanLyThanhVienComponent } from './quantrivien/quanlythanhvien/quan-ly-thanh-vien/quan-ly-thanh-vien.component';
 import { PhanHoiComponent } from './quantrivien/quanlythanhvien/phan-hoi/phan-hoi.component';
 import { LayoutAdminComponent } from './quantrivien/layout/layout-admin/layout-admin.component';
-
+import { XemloimoiketbanComponent } from './client/ketban/xemloimoiketban/xemloimoiketban.component';
+import { GuiloimoiketbanComponent } from './client/ketban/guiloimoiketban/guiloimoiketban.component';
+import { XemdanhsachbanbeComponent } from './client/ketban/xemdanhsachbanbe/xemdanhsachbanbe.component';
 export function getAuthServiceConfigs() {
   const config = new AuthServiceConfig(
     []
@@ -69,7 +71,11 @@ export function getAuthServiceConfigs() {
     ListThongbaoComponent,
     QuanLyThanhVienComponent,
     PhanHoiComponent,
-    LayoutAdminComponent
+    LayoutAdminComponent,
+    XemloimoiketbanComponent,
+    GuiloimoiketbanComponent,
+    XemdanhsachbanbeComponent
+
 
   ],
   imports: [
