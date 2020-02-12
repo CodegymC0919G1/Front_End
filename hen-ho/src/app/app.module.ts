@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule,NO_ERRORS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ShareModule} from 'src/app/share/share.module';
@@ -25,19 +25,6 @@ import { XembaidangComponent } from './quantrivien/quanlybaidang/xembaidang/xemb
 import { SuabaidangComponent } from './quantrivien/quanlybaidang/suabaidang/suabaidang.component';
 import { DanhsachbaidangComponent } from './quantrivien/quanlybaidang/danhsachbaidang/danhsachbaidang.component';
 
-
-
-import { XemloimoiketbanComponent } from './client/ketban/xemloimoiketban/xemloimoiketban.component';
-import { GuiloimoiketbanComponent } from './client/ketban/guiloimoiketban/guiloimoiketban.component';
-import { XemdanhsachbanbeComponent } from './client/ketban/xemdanhsachbanbe/xemdanhsachbanbe.component';
-
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material/button';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MDBBootstrapModule,DropdownModule  } from 'angular-bootstrap-md';
-import { ThongtinchokhachComponent } from './client/XemThongTinWebsite/thongtinchokhach/thongtinchokhach.component';
-import { ThongtinchothanhvienComponent } from './client/XemThongTinWebsite/thongtinchothanhvien/thongtinchothanhvien.component';
-import { ThongtinchoquantrivienComponent } from './client/XemThongTinWebsite/thongtinchoquantrivien/thongtinchoquantrivien.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { DangNhapComponent } from './client/login/dang-nhap/dang-nhap.component';
 import { AuthServiceConfig } from 'angular-6-social-login';
@@ -47,15 +34,16 @@ import { ListThongbaoComponent } from './quantrivien/thong-bao/list-thongbao/lis
 import { QuanLyThanhVienComponent } from './quantrivien/quanlythanhvien/quan-ly-thanh-vien/quan-ly-thanh-vien.component';
 import { PhanHoiComponent } from './quantrivien/quanlythanhvien/phan-hoi/phan-hoi.component';
 import { LayoutAdminComponent } from './quantrivien/layout/layout-admin/layout-admin.component';
-import { ThongbaoDetalComponent } from './quantrivien/thong-bao/thongbao-detal/thongbao-detal.component';
-
-
+import { XemloimoiketbanComponent } from './client/ketban/xemloimoiketban/xemloimoiketban.component';
+import { GuiloimoiketbanComponent } from './client/ketban/guiloimoiketban/guiloimoiketban.component';
+import { XemdanhsachbanbeComponent } from './client/ketban/xemdanhsachbanbe/xemdanhsachbanbe.component';
 export function getAuthServiceConfigs() {
   const config = new AuthServiceConfig(
     []
   );
   return config;
 }
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -80,20 +68,17 @@ export function getAuthServiceConfigs() {
     XembaidangComponent,
     SuabaidangComponent,
     DanhsachbaidangComponent,
-    ThongtinchokhachComponent,
-    ThongtinchothanhvienComponent,
-    ThongtinchoquantrivienComponent,
     ListThongbaoComponent,
+
     QuanLyThanhVienComponent,
     PhanHoiComponent,
     LayoutAdminComponent,
     XemloimoiketbanComponent,
     GuiloimoiketbanComponent,
-    XemdanhsachbanbeComponent,
-    LayoutAdminComponent,
-    ThongbaoDetalComponent
-  ],
+    XemdanhsachbanbeComponent
 
+
+  ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
@@ -101,19 +86,8 @@ export function getAuthServiceConfigs() {
     ShareModule,
     FormsModule,
     NgbModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    ReactiveFormsModule,
-    MatButtonModule,
-    MatDialogModule,
-    HttpClientModule,
-    MDBBootstrapModule.forRoot(),
-    DropdownModule.forRoot(),
+    HttpClientModule
   ],
-  schemas: [ NO_ERRORS_SCHEMA ],
-  bootstrap: [AppComponent],
-  entryComponents: [GuithuComponent],
   providers: [
     {
       provide: AuthServiceConfig,
@@ -121,5 +95,6 @@ export function getAuthServiceConfigs() {
     },
     httpInterceptorProviders
   ],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

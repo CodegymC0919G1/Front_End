@@ -1,8 +1,7 @@
-import { NhomThanhVien } from './../../model/hoinhom/nhomthanhvien';
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
-import { HoiNhom } from 'src/app/model/hoinhom/hoinhom';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { HoiNhom } from 'src/app/model/hoinhom';
 
 @Injectable({
   providedIn: 'root'

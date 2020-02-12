@@ -1,4 +1,3 @@
-
 export class NhomThanhVien {
   id: number;
   hoTenAdmin:string;
