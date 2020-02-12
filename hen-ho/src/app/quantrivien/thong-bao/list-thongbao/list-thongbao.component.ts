@@ -3,7 +3,6 @@ import { ThongBaoService } from './../../../service/thongbao/thongbao.service';
 import { ThongBao } from './../../../model/thongbao';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import { ThongbaoDetalComponent } from '../thongbao-detal/thongbao-detal.component';
 
 
 @Component({
@@ -21,7 +20,7 @@ export class ListThongbaoComponent implements OnInit {
     private thongbaoService: ThongBaoService,
     private fb: FormBuilder,
     private activatedRouter: ActivatedRoute
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.thongbaoService.getAllThongBao().subscribe(
@@ -29,14 +28,5 @@ export class ListThongbaoComponent implements OnInit {
       error => (this.thongbaoList = [])
     );
   }
-
-  // xemChiTiet() {
-  //   const dialogConfig = new MatDialogConfig();
-  //   dialogConfig.disableClose = true;
-  //   dialogConfig.id = 'modal-component';
-  //   dialogConfig.height = '100%';
-  //   dialogConfig.width = '40%';
-  //   const modalDialog = this.matDialog.open(ThongbaoDetalComponent, dialogConfig);
-  // }
 
 }

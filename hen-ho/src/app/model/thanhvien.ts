@@ -1,5 +1,3 @@
-
-import { User } from './user';
 export class ThanhVien {
   idThanhVien: number;
   hoTen: string;
@@ -15,8 +13,7 @@ export class ThanhVien {
   luotThich: number;
   trangThaiDangNhap: number;
   khoa: boolean;
-  mucDichThamGia: string
-  user: User;
+  mucDichThamGia: string;
   contructor() { }
 }
 
