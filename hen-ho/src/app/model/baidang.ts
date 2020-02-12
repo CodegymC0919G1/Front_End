@@ -1,11 +1,13 @@
+import { HoiNhom } from './hoinhom';
+import { QlThanhVien } from './qlThanhVien';
+
 export class Baidang {
   idBaiDang: number;
-  idThanhVien: number;
   tieuDe: string;
   anh: string;
   noiDung: string;
-  trangThai: string;
-  ngayDang: Date;
-  contructor() {}
+  xoa: boolean;
+  thoiGianDang: Date;
+  thanhVienDang: QlThanhVien;
+  idHoiNhom: HoiNhom;
 }
-

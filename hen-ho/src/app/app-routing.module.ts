@@ -1,3 +1,10 @@
+import { DangkiComponent } from "./client/dangki/dangki.component";
+import { KhoitaothongtinComponent } from "./client/khoitaothongtin/khoitaothongtin.component";
+import { QuanlyhopthuComponent } from "./client/HopThu-Component/quanlyhopthu/quanlyhopthu.component";
+import { GuithuComponent } from "./client/HopThu-Component/guithu/guithu.component";
+import { XemthuComponent } from "./client/HopThu-Component/xemthu/xemthu.component";
+
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LayoutAdminComponent } from './quantrivien/layout/layout-admin/layout-admin.component';
@@ -14,21 +21,29 @@ import { ListThongbaoComponent } from './quantrivien/thong-bao/list-thongbao/lis
 
 const routes: Routes = [
   {
-    path: 'loginAD', component: LoginAdminComponent
+    path: "loginAD",
+    component: LoginAdminComponent
   },
   {
-    path: 'admin', component: LayoutAdminComponent,
+    path: "admin",
+    component: LayoutAdminComponent,
     children: [
-      { path: '', component: QuanLyThanhVienComponent },
-      { path: 'quan-ly-thanh-vien', component: QuanLyThanhVienComponent },
-      { path: 'phan-hoi', component: PhanHoiComponent },
-      { path: 'thong-bao/list', component: ListThongbaoComponent },
-      { path: 'quan-ly-hoi-nhom', component: DanhSachHoiNhomComponent },
-      { path: 'quan-ly-hoi-nhom/:id', component: ChiTietHoiNhomComponent },
-      { path: 'quan-ly-hoi-nhom/thong-tin-nhom/:id', component: ThongTinCuaNhomComponent },
-      { path: 'quan-ly-bai-dang', component: DanhsachbaidangComponent },
-      { path: 'quan-ly-bai-dang/sua-bai-dang/:id', component: SuabaidangComponent },
-      { path: 'dang-thong-bao', component: DangThongBaoComponent }
+      { path: "", component: QuanLyThanhVienComponent },
+      { path: "quan-ly-thanh-vien", component: QuanLyThanhVienComponent },
+      { path: "phan-hoi", component: PhanHoiComponent },
+      { path: "thong-bao/list", component: ListThongbaoComponent },
+      { path: "quan-ly-hoi-nhom", component: DanhSachHoiNhomComponent },
+      { path: "quan-ly-hoi-nhom/:id", component: ChiTietHoiNhomComponent },
+      {
+        path: "quan-ly-hoi-nhom/thong-tin-nhom/:id",
+        component: ThongTinCuaNhomComponent
+      },
+      { path: "quan-ly-bai-dang", component: DanhsachbaidangComponent },
+      {
+        path: "quan-ly-bai-dang/sua-bai-dang/:id",
+        component: SuabaidangComponent
+      },
+      { path: "dang-thong-bao", component: DangThongBaoComponent }
     ]
   }
 ];
@@ -36,4 +51,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
