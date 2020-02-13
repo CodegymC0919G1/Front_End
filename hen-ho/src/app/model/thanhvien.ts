@@ -15,6 +15,7 @@ export class Thanhvien {
     trangThaiDangNhap:number;
     khoa:boolean;
     mucDichThamGia:string;
+    ngayThamGia: Date
     user:User;
     contructor() {}
   }

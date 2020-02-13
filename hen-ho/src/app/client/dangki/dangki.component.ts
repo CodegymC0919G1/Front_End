@@ -23,7 +23,6 @@ declare var require: any
 
 
 
-
 @Component({
   selector: 'app-dangki',
   templateUrl: './dangki.component.html',
@@ -88,6 +87,7 @@ export class DangkiComponent implements OnInit {
     this.thanhvien.ngheNghiep = this.registerForm.value.ngheNghiep;
     this.thanhvien.ngaySinh = new Date(this.registerForm.value.ngaySinh);
     this.thanhvien.gioiTinh = this.registerForm.value.gioiTinh;
+    this.thanhvien.ngayThamGia = new Date();
 
 
     this.thanhvienService.createThanhvien(this.thanhvien)
