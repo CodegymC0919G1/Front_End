@@ -199,14 +199,14 @@
           </div> <!-- form-group// -->
 
           <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block" style="background-color: brown;">Hủy Bỏ</button>
+         <button type="submit" class="btn btn-primary btn-block" style="background-color: teal">Hủy Bỏ</button>
           </div>
           <!-- form-group// -->
-          <p class="text-center">Bạn đã có tài khoản? <a href="">Đăng Nhập</a> </p>
+          <p class="text-center">Bạn đã có tài khoản? <a href="http://localhost:4200/loginAD">Đăng Nhập</a> </p>
         </form>
       </div>
 
       <div [hidden]="!submitted">
         <h4>Bạn đã đăng kí xong mời bạn khởi tạo thông tin!</h4>
-        <button class="btn btn-success" (click)="newThanhvien()" routerLink="add">Khởi Tạo Thông Tin</button>
+        <button class="btn btn-success" (click)="newThanhvien()" routerLink="updateInfor">Khởi Tạo Thông Tin</button>
       </div>
