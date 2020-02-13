@@ -3,8 +3,6 @@ import {KhoitaothongtinComponent} from './client/khoitaothongtin/khoitaothongtin
 import {QuanlyhopthuComponent} from './client/HopThu-Component/quanlyhopthu/quanlyhopthu.component';
 import {GuithuComponent} from './client/HopThu-Component/guithu/guithu.component';
 import {XemthuComponent} from './client/HopThu-Component/xemthu/xemthu.component';
-
-
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {LayoutAdminComponent} from './quantrivien/layout/layout-admin/layout-admin.component';
@@ -18,7 +16,6 @@ import {SuabaidangComponent} from './quantrivien/quanlybaidang/suabaidang/suabai
 import {DanhsachbaidangComponent} from './quantrivien/quanlybaidang/danhsachbaidang/danhsachbaidang.component';
 import {LoginAdminComponent} from './quantrivien/login-admin/login-admin/login-admin.component';
 import {ListThongbaoComponent} from './quantrivien/thong-bao/list-thongbao/list-thongbao.component';
-
 import {ThongtinchokhachComponent} from './client/XemThongTinWebsite/thongtinchokhach/thongtinchokhach.component';
 
 const routes: Routes = [
@@ -50,7 +47,6 @@ const routes: Routes = [
       {path: 'dang-thong-bao', component: DangThongBaoComponent}
     ]
   },
-  
   {
     path: 'listthu', component: QuanlyhopthuComponent
   }, {
@@ -60,8 +56,10 @@ const routes: Routes = [
     path: 'thongtinchokhach', component: ThongtinchokhachComponent
   }
 ];
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+}

@@ -24,7 +24,6 @@ import { DangbaiComponent } from './client/dangbai/dangbai/dangbai.component';
 import { XembaidangComponent } from './quantrivien/quanlybaidang/xembaidang/xembaidang.component';
 import { SuabaidangComponent } from './quantrivien/quanlybaidang/suabaidang/suabaidang.component';
 import { DanhsachbaidangComponent } from './quantrivien/quanlybaidang/danhsachbaidang/danhsachbaidang.component';
-
 import {NgbModule, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -40,7 +39,6 @@ import { LayoutAdminComponent } from './quantrivien/layout/layout-admin/layout-a
 import { ListTbComponent } from './client/thongbao/list-tb/list-tb.component';
 import { ThongbaoDetalComponent } from './quantrivien/thong-bao/thongbao-detal/thongbao-detal.component';
 import { TimKiemComponent } from './client/timkiem/tim-kiem/tim-kiem.component';
-
 import { XemloimoiketbanComponent } from './client/ketban/xemloimoiketban/xemloimoiketban.component';
 import { GuiloimoiketbanComponent } from './client/ketban/guiloimoiketban/guiloimoiketban.component';
 import { XemdanhsachbanbeComponent } from './client/ketban/xemdanhsachbanbe/xemdanhsachbanbe.component';
@@ -77,7 +75,6 @@ export function getAuthServiceConfigs() {
     SuabaidangComponent,
     DanhsachbaidangComponent,
     ListThongbaoComponent,
-
     QuanLyThanhVienComponent,
     PhanHoiComponent,
     LayoutAdminComponent,
@@ -98,7 +95,8 @@ export function getAuthServiceConfigs() {
     NgbModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    HttpClientModule
   ],
   schemas: [],
   entryComponents: [GuithuComponent],
