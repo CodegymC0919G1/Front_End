@@ -21,7 +21,7 @@ export class ThongBaoService {
   deleteThongBao(id: string): Observable<any> {
     return this.http.delete<any>(this.baseUrl + '/' + id);
   }
-  getThongBao(id: number): Observable<any> {
+  getThongBao(id: string): Observable<any> {
     return this.http.get(this.baseUrl + '/' + id);
   }
 }

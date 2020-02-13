@@ -32,7 +32,7 @@ export class DangThongBaoComponent implements OnInit {
     });
   }
   onSubmit(form) {
-
+    
         // const { value } = this.thongbaoForm;
         // const data = {
         //     ...this.thongbao,
@@ -40,13 +40,14 @@ export class DangThongBaoComponent implements OnInit {
         // };
         console.log(form.noiDung);
         console.log(this.thongbao.noiDung);
+        
         this.thongbao.noiDung = form.noiDung;
         this.thongbao.tieuDe = form.tieuDe;
         this.thongbao.thoiGianThongBao = new Date();
         console.log(this.thongbao);
         this.thongbaoService.createThongBao(this.thongbao).subscribe(
             next => {
-                this.router.navigate(['admin/thong-bao']);
+                this.router.navigate(['admin/thong-bao/list']);
             },
             error => console.log(error)
         );

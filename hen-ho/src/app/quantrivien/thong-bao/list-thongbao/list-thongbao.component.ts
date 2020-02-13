@@ -3,7 +3,6 @@ import { ThongBaoService } from './../../../service/thongbao/thongbao.service';
 import { ThongBao } from './../../../model/thongbao';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
@@ -15,7 +14,7 @@ export class ListThongbaoComponent implements OnInit {
   thongbao: ThongBao;
   thongbaoForm: FormGroup;
   thongbaoList: ThongBao[] = [];
-  id: number;
+  keyword: string;
 
   constructor(
     private thongbaoService: ThongBaoService,
